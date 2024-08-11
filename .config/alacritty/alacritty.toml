@@ -1,1 +1,9 @@
 shell = "/usr/bin/zsh"
+[font]
+    normal = { family = "JetBrains Mono Nerd Font", style = "Medium" }
+    bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
+    italic = {family = "JetBrains Mono Nerd Font", style = "MediumItalic"}
+    bold_italic = {family = "JetBrains Mono Nerd Font", style = "BoldItalic"}
+    size = 12
+[cursor]
+    style = {shape = "Beam", blinking = "On"}
