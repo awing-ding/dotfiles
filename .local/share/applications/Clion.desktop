@@ -1,0 +1,11 @@
+#! /usr/bin/env xdg-open
+[Desktop Entry]
+Name=CLion
+Exec=/opt/clion-2024.1.4/bin/clion.sh
+Comment=Clion
+Icon=/opt/clion-2024.1.4/bin/clion.png
+Type=Application
+GenericName=Development;IDE;
+path=/opt/clion-2024.4.1/bin
+Terminal=False
+StartupWMClass=jetbrains-clion

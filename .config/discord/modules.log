@@ -1,0 +1,561 @@
+2024-09-11T13:24:08.706Z [Modules] Modules initializing
+2024-09-11T13:24:08.706Z [Modules] Distribution: remote
+2024-09-11T13:24:08.706Z [Modules] Host updates: enabled
+2024-09-11T13:24:08.706Z [Modules] Module updates: enabled
+2024-09-11T13:24:08.707Z [Modules] Module install path: /home/awing/.config/discord/0.0.68/modules
+2024-09-11T13:24:08.707Z [Modules] Module installed file path: /home/awing/.config/discord/0.0.68/modules/installed.json
+2024-09-11T13:24:08.707Z [Modules] Module download path: /home/awing/.config/discord/0.0.68/modules/pending
+2024-09-11T13:24:08.905Z [Modules] Bootstrapping...
+2024-09-11T13:24:08.905Z [Modules] Installing discord_desktop_core@0 from /opt/discord/resources/bootstrap/discord_desktop_core.zip
+2024-09-11T13:24:08.907Z [Modules] Failed installing discord_desktop_core@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_desktop_core.zip'
+2024-09-11T13:24:08.908Z [Modules] Installing discord_erlpack@0 from /opt/discord/resources/bootstrap/discord_erlpack.zip
+2024-09-11T13:24:08.924Z [Modules] Failed installing discord_erlpack@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_erlpack.zip'
+2024-09-11T13:24:08.924Z [Modules] Installing discord_spellcheck@0 from /opt/discord/resources/bootstrap/discord_spellcheck.zip
+2024-09-11T13:24:08.927Z [Modules] Failed installing discord_spellcheck@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_spellcheck.zip'
+2024-09-11T13:24:08.927Z [Modules] Installing discord_utils@0 from /opt/discord/resources/bootstrap/discord_utils.zip
+2024-09-11T13:24:08.932Z [Modules] Failed installing discord_utils@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_utils.zip'
+2024-09-11T13:24:08.932Z [Modules] Installing discord_voice@0 from /opt/discord/resources/bootstrap/discord_voice.zip
+2024-09-11T13:24:08.933Z [Modules] Failed installing discord_voice@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_voice.zip'
+2024-09-11T13:24:08.933Z [Modules] Installing discord_zstd@0 from /opt/discord/resources/bootstrap/discord_zstd.zip
+2024-09-11T13:24:08.934Z [Modules] Failed installing discord_zstd@0: Error: ENOENT: no such file or directory, open '/opt/discord/resources/bootstrap/discord_zstd.zip'
+2024-09-11T13:24:08.934Z [Modules] Finished module installations. [success: 0] [failure: 6]
+2024-09-11T13:24:08.934Z [Modules] Checking for host updates.
+2024-09-11T13:24:09.110Z [Modules] Host is up to date.
+2024-09-11T13:24:09.110Z [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+2024-09-11T13:24:09.142Z [Modules] Module update available: discord_desktop_core@1 [installed: 0]
+2024-09-11T13:24:09.142Z [Modules] Module update available: discord_erlpack@1 [installed: 0]
+2024-09-11T13:24:09.142Z [Modules] Module update available: discord_spellcheck@1 [installed: 0]
+2024-09-11T13:24:09.142Z [Modules] Module update available: discord_utils@1 [installed: 0]
+2024-09-11T13:24:09.142Z [Modules] Module update available: discord_voice@1 [installed: 0]
+2024-09-11T13:24:09.142Z [Modules] Module update available: discord_zstd@1 [installed: 0]
+2024-09-11T13:24:09.143Z [Modules] Fetching discord_desktop_core@1 from https://discord.com/api/modules/stable/discord_desktop_core/1
+2024-09-11T13:24:09.143Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip
+2024-09-11T13:24:09.373Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 2%
+2024-09-11T13:24:09.385Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 3%
+2024-09-11T13:24:09.424Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 6%
+2024-09-11T13:24:09.427Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 10%
+2024-09-11T13:24:09.454Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 12%
+2024-09-11T13:24:09.467Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 13%
+2024-09-11T13:24:09.476Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 14%
+2024-09-11T13:24:09.524Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 15%
+2024-09-11T13:24:09.592Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 16%
+2024-09-11T13:24:09.596Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 17%
+2024-09-11T13:24:09.601Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 20%
+2024-09-11T13:24:09.603Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 23%
+2024-09-11T13:24:09.605Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 31%
+2024-09-11T13:24:09.607Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 39%
+2024-09-11T13:24:09.640Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 40%
+2024-09-11T13:24:09.644Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 41%
+2024-09-11T13:24:09.678Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 43%
+2024-09-11T13:24:09.678Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 52%
+2024-09-11T13:24:09.679Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 60%
+2024-09-11T13:24:09.680Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 65%
+2024-09-11T13:24:09.704Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 66%
+2024-09-11T13:24:09.715Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 68%
+2024-09-11T13:24:09.716Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 70%
+2024-09-11T13:24:09.717Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 71%
+2024-09-11T13:24:09.744Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 74%
+2024-09-11T13:24:09.747Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 83%
+2024-09-11T13:24:09.748Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 86%
+2024-09-11T13:24:09.751Z [Modules] Streaming discord_desktop_core@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip: 100%
+2024-09-11T13:24:09.756Z [Modules] Fetching discord_erlpack@1 from https://discord.com/api/modules/stable/discord_erlpack/1
+2024-09-11T13:24:09.757Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip
+2024-09-11T13:24:09.918Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 1%
+2024-09-11T13:24:09.920Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 2%
+2024-09-11T13:24:09.923Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 3%
+2024-09-11T13:24:09.926Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 5%
+2024-09-11T13:24:09.929Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 6%
+2024-09-11T13:24:09.934Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 7%
+2024-09-11T13:24:09.935Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 8%
+2024-09-11T13:24:09.938Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 9%
+2024-09-11T13:24:09.985Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 11%
+2024-09-11T13:24:09.987Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 12%
+2024-09-11T13:24:09.990Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 15%
+2024-09-11T13:24:09.992Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 17%
+2024-09-11T13:24:09.994Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 18%
+2024-09-11T13:24:09.999Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 20%
+2024-09-11T13:24:10.005Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 21%
+2024-09-11T13:24:10.009Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 24%
+2024-09-11T13:24:10.010Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 26%
+2024-09-11T13:24:10.078Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 29%
+2024-09-11T13:24:10.079Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 39%
+2024-09-11T13:24:10.081Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 44%
+2024-09-11T13:24:10.108Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 45%
+2024-09-11T13:24:10.111Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 46%
+2024-09-11T13:24:10.115Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 49%
+2024-09-11T13:24:10.117Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 55%
+2024-09-11T13:24:10.130Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 56%
+2024-09-11T13:24:10.135Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 59%
+2024-09-11T13:24:10.137Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 66%
+2024-09-11T13:24:10.169Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 67%
+2024-09-11T13:24:10.173Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 70%
+2024-09-11T13:24:10.175Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 74%
+2024-09-11T13:24:10.178Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 86%
+2024-09-11T13:24:10.180Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 96%
+2024-09-11T13:24:10.183Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 97%
+2024-09-11T13:24:10.186Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 98%
+2024-09-11T13:24:10.187Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 99%
+2024-09-11T13:24:10.189Z [Modules] Streaming discord_erlpack@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip: 100%
+2024-09-11T13:24:10.195Z [Modules] Fetching discord_spellcheck@1 from https://discord.com/api/modules/stable/discord_spellcheck/1
+2024-09-11T13:24:10.195Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip
+2024-09-11T13:24:10.408Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 1%
+2024-09-11T13:24:10.409Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 2%
+2024-09-11T13:24:10.429Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 3%
+2024-09-11T13:24:10.431Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 4%
+2024-09-11T13:24:10.473Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 5%
+2024-09-11T13:24:10.475Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 6%
+2024-09-11T13:24:10.479Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 7%
+2024-09-11T13:24:10.532Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 8%
+2024-09-11T13:24:10.546Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 9%
+2024-09-11T13:24:10.579Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 10%
+2024-09-11T13:24:10.595Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 11%
+2024-09-11T13:24:10.629Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 12%
+2024-09-11T13:24:10.630Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 13%
+2024-09-11T13:24:10.679Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 14%
+2024-09-11T13:24:10.696Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 15%
+2024-09-11T13:24:10.705Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 16%
+2024-09-11T13:24:10.793Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 17%
+2024-09-11T13:24:10.795Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 19%
+2024-09-11T13:24:10.821Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 20%
+2024-09-11T13:24:10.834Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 21%
+2024-09-11T13:24:10.864Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 22%
+2024-09-11T13:24:10.891Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 23%
+2024-09-11T13:24:10.915Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 24%
+2024-09-11T13:24:10.961Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 25%
+2024-09-11T13:24:10.986Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 26%
+2024-09-11T13:24:10.996Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 27%
+2024-09-11T13:24:11.005Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 28%
+2024-09-11T13:24:11.025Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 29%
+2024-09-11T13:24:11.041Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 30%
+2024-09-11T13:24:11.064Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 31%
+2024-09-11T13:24:11.066Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 32%
+2024-09-11T13:24:11.079Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 33%
+2024-09-11T13:24:11.098Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 34%
+2024-09-11T13:24:11.108Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 35%
+2024-09-11T13:24:11.113Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 36%
+2024-09-11T13:24:11.128Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 37%
+2024-09-11T13:24:11.131Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 38%
+2024-09-11T13:24:11.142Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 39%
+2024-09-11T13:24:11.162Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 40%
+2024-09-11T13:24:11.163Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 41%
+2024-09-11T13:24:11.178Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 42%
+2024-09-11T13:24:11.182Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 43%
+2024-09-11T13:24:11.191Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 44%
+2024-09-11T13:24:11.195Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 45%
+2024-09-11T13:24:11.208Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 46%
+2024-09-11T13:24:11.219Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 47%
+2024-09-11T13:24:11.220Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 48%
+2024-09-11T13:24:11.236Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 49%
+2024-09-11T13:24:11.246Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 50%
+2024-09-11T13:24:11.257Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 51%
+2024-09-11T13:24:11.268Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 52%
+2024-09-11T13:24:11.268Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 53%
+2024-09-11T13:24:11.273Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 54%
+2024-09-11T13:24:11.293Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 55%
+2024-09-11T13:24:11.301Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 56%
+2024-09-11T13:24:11.310Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 57%
+2024-09-11T13:24:11.323Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 58%
+2024-09-11T13:24:11.325Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 59%
+2024-09-11T13:24:11.329Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 60%
+2024-09-11T13:24:11.349Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 61%
+2024-09-11T13:24:11.352Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 62%
+2024-09-11T13:24:11.367Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 63%
+2024-09-11T13:24:11.375Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 64%
+2024-09-11T13:24:11.383Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 65%
+2024-09-11T13:24:11.388Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 66%
+2024-09-11T13:24:11.395Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 67%
+2024-09-11T13:24:11.407Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 68%
+2024-09-11T13:24:11.417Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 69%
+2024-09-11T13:24:11.427Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 70%
+2024-09-11T13:24:11.432Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 71%
+2024-09-11T13:24:11.439Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 72%
+2024-09-11T13:24:11.454Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 73%
+2024-09-11T13:24:11.456Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 74%
+2024-09-11T13:24:11.470Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 75%
+2024-09-11T13:24:11.471Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 76%
+2024-09-11T13:24:11.487Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 77%
+2024-09-11T13:24:11.490Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 78%
+2024-09-11T13:24:11.503Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 79%
+2024-09-11T13:24:11.515Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 80%
+2024-09-11T13:24:11.520Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 81%
+2024-09-11T13:24:11.521Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 82%
+2024-09-11T13:24:11.541Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 83%
+2024-09-11T13:24:11.543Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 84%
+2024-09-11T13:24:11.554Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 85%
+2024-09-11T13:24:11.557Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 86%
+2024-09-11T13:24:11.580Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 88%
+2024-09-11T13:24:11.595Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 89%
+2024-09-11T13:24:11.597Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 90%
+2024-09-11T13:24:11.609Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 91%
+2024-09-11T13:24:11.611Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 92%
+2024-09-11T13:24:11.629Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 93%
+2024-09-11T13:24:11.631Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 94%
+2024-09-11T13:24:11.633Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 95%
+2024-09-11T13:24:11.642Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 96%
+2024-09-11T13:24:11.665Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 97%
+2024-09-11T13:24:11.666Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 98%
+2024-09-11T13:24:11.674Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 99%
+2024-09-11T13:24:11.898Z [Modules] Streaming discord_spellcheck@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip: 100%
+2024-09-11T13:24:11.901Z [Modules] Fetching discord_utils@1 from https://discord.com/api/modules/stable/discord_utils/1
+2024-09-11T13:24:11.902Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip
+2024-09-11T13:24:12.078Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 1%
+2024-09-11T13:24:12.081Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 2%
+2024-09-11T13:24:12.084Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 3%
+2024-09-11T13:24:12.087Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 5%
+2024-09-11T13:24:12.093Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 7%
+2024-09-11T13:24:12.102Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 9%
+2024-09-11T13:24:12.105Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 11%
+2024-09-11T13:24:12.108Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 14%
+2024-09-11T13:24:12.111Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 15%
+2024-09-11T13:24:12.124Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 16%
+2024-09-11T13:24:12.128Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 18%
+2024-09-11T13:24:12.131Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 22%
+2024-09-11T13:24:12.144Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 24%
+2024-09-11T13:24:12.145Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 27%
+2024-09-11T13:24:12.161Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 29%
+2024-09-11T13:24:12.164Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 31%
+2024-09-11T13:24:12.166Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 32%
+2024-09-11T13:24:12.173Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 34%
+2024-09-11T13:24:12.174Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 35%
+2024-09-11T13:24:12.185Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 37%
+2024-09-11T13:24:12.188Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 39%
+2024-09-11T13:24:12.193Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 41%
+2024-09-11T13:24:12.194Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 44%
+2024-09-11T13:24:12.196Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 45%
+2024-09-11T13:24:12.199Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 46%
+2024-09-11T13:24:12.202Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 47%
+2024-09-11T13:24:12.216Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 49%
+2024-09-11T13:24:12.224Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 51%
+2024-09-11T13:24:12.229Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 53%
+2024-09-11T13:24:12.236Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 55%
+2024-09-11T13:24:12.238Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 57%
+2024-09-11T13:24:12.244Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 59%
+2024-09-11T13:24:12.246Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 62%
+2024-09-11T13:24:12.260Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 63%
+2024-09-11T13:24:12.262Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 67%
+2024-09-11T13:24:12.265Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 68%
+2024-09-11T13:24:12.268Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 69%
+2024-09-11T13:24:12.282Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 71%
+2024-09-11T13:24:12.284Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 73%
+2024-09-11T13:24:12.298Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 75%
+2024-09-11T13:24:12.299Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 76%
+2024-09-11T13:24:12.315Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 78%
+2024-09-11T13:24:12.317Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 81%
+2024-09-11T13:24:12.326Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 82%
+2024-09-11T13:24:12.333Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 83%
+2024-09-11T13:24:12.334Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 85%
+2024-09-11T13:24:12.339Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 87%
+2024-09-11T13:24:12.340Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 90%
+2024-09-11T13:24:12.341Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 91%
+2024-09-11T13:24:12.344Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 92%
+2024-09-11T13:24:12.358Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 94%
+2024-09-11T13:24:12.365Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 96%
+2024-09-11T13:24:12.366Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 98%
+2024-09-11T13:24:12.367Z [Modules] Streaming discord_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip: 100%
+2024-09-11T13:24:12.369Z [Modules] Fetching discord_voice@1 from https://discord.com/api/modules/stable/discord_voice/1
+2024-09-11T13:24:12.370Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip
+2024-09-11T13:24:12.563Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 1%
+2024-09-11T13:24:12.585Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 2%
+2024-09-11T13:24:12.603Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 3%
+2024-09-11T13:24:12.622Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 4%
+2024-09-11T13:24:12.655Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 5%
+2024-09-11T13:24:12.674Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 6%
+2024-09-11T13:24:12.694Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 7%
+2024-09-11T13:24:12.706Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 8%
+2024-09-11T13:24:12.724Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 9%
+2024-09-11T13:24:12.759Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 10%
+2024-09-11T13:24:12.777Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 11%
+2024-09-11T13:24:12.793Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 12%
+2024-09-11T13:24:12.807Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 13%
+2024-09-11T13:24:12.842Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 14%
+2024-09-11T13:24:12.861Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 15%
+2024-09-11T13:24:12.872Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 16%
+2024-09-11T13:24:12.890Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 17%
+2024-09-11T13:24:12.926Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 18%
+2024-09-11T13:24:12.932Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 19%
+2024-09-11T13:24:12.962Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 20%
+2024-09-11T13:24:12.984Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 21%
+2024-09-11T13:24:13.005Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 22%
+2024-09-11T13:24:13.022Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 23%
+2024-09-11T13:24:13.052Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 24%
+2024-09-11T13:24:13.071Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 25%
+2024-09-11T13:24:13.091Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 26%
+2024-09-11T13:24:13.105Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 27%
+2024-09-11T13:24:13.128Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 28%
+2024-09-11T13:24:13.140Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 29%
+2024-09-11T13:24:13.160Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 30%
+2024-09-11T13:24:13.193Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 31%
+2024-09-11T13:24:13.215Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 32%
+2024-09-11T13:24:13.232Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 33%
+2024-09-11T13:24:13.247Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 34%
+2024-09-11T13:24:13.270Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 35%
+2024-09-11T13:24:13.298Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 36%
+2024-09-11T13:24:13.313Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 37%
+2024-09-11T13:24:13.340Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 38%
+2024-09-11T13:24:13.350Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 39%
+2024-09-11T13:24:13.378Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 40%
+2024-09-11T13:24:13.398Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 41%
+2024-09-11T13:24:13.421Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 42%
+2024-09-11T13:24:13.431Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 43%
+2024-09-11T13:24:13.451Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 44%
+2024-09-11T13:24:13.470Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 45%
+2024-09-11T13:24:13.503Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 46%
+2024-09-11T13:24:13.513Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 47%
+2024-09-11T13:24:13.546Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 48%
+2024-09-11T13:24:13.555Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 49%
+2024-09-11T13:24:13.579Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 50%
+2024-09-11T13:24:13.595Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 51%
+2024-09-11T13:24:13.624Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 52%
+2024-09-11T13:24:13.644Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 53%
+2024-09-11T13:24:13.665Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 54%
+2024-09-11T13:24:13.690Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 55%
+2024-09-11T13:24:13.701Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 56%
+2024-09-11T13:24:13.729Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 57%
+2024-09-11T13:24:13.754Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 58%
+2024-09-11T13:24:13.771Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 59%
+2024-09-11T13:24:13.782Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 60%
+2024-09-11T13:24:13.842Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 61%
+2024-09-11T13:24:13.860Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 62%
+2024-09-11T13:24:13.893Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 63%
+2024-09-11T13:24:13.909Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 64%
+2024-09-11T13:24:13.927Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 65%
+2024-09-11T13:24:13.951Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 66%
+2024-09-11T13:24:13.965Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 67%
+2024-09-11T13:24:13.989Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 68%
+2024-09-11T13:24:14.011Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 69%
+2024-09-11T13:24:14.034Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 70%
+2024-09-11T13:24:14.053Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 71%
+2024-09-11T13:24:14.068Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 72%
+2024-09-11T13:24:14.087Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 73%
+2024-09-11T13:24:14.109Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 74%
+2024-09-11T13:24:14.136Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 75%
+2024-09-11T13:24:14.156Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 76%
+2024-09-11T13:24:14.176Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 77%
+2024-09-11T13:24:14.188Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 78%
+2024-09-11T13:24:14.210Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 79%
+2024-09-11T13:24:14.240Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 80%
+2024-09-11T13:24:14.251Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 81%
+2024-09-11T13:24:14.283Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 82%
+2024-09-11T13:24:14.305Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 83%
+2024-09-11T13:24:14.322Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 84%
+2024-09-11T13:24:14.335Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 85%
+2024-09-11T13:24:14.360Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 86%
+2024-09-11T13:24:14.381Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 87%
+2024-09-11T13:24:14.409Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 88%
+2024-09-11T13:24:14.428Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 89%
+2024-09-11T13:24:14.445Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 90%
+2024-09-11T13:24:14.458Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 91%
+2024-09-11T13:24:14.486Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 92%
+2024-09-11T13:24:14.520Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 93%
+2024-09-11T13:24:14.535Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 94%
+2024-09-11T13:24:14.555Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 95%
+2024-09-11T13:24:14.571Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 96%
+2024-09-11T13:24:14.588Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 97%
+2024-09-11T13:24:14.609Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 98%
+2024-09-11T13:24:14.630Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 99%
+2024-09-11T13:24:14.651Z [Modules] Streaming discord_voice@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip: 100%
+2024-09-11T13:24:14.651Z [Modules] Fetching discord_zstd@1 from https://discord.com/api/modules/stable/discord_zstd/1
+2024-09-11T13:24:14.652Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip
+2024-09-11T13:24:14.805Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 4%
+2024-09-11T13:24:14.817Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 11%
+2024-09-11T13:24:14.819Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 27%
+2024-09-11T13:24:14.819Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 43%
+2024-09-11T13:24:14.823Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 51%
+2024-09-11T13:24:14.824Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 56%
+2024-09-11T13:24:14.825Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 60%
+2024-09-11T13:24:14.826Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 64%
+2024-09-11T13:24:14.828Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 68%
+2024-09-11T13:24:14.829Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 71%
+2024-09-11T13:24:14.830Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 75%
+2024-09-11T13:24:14.832Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 79%
+2024-09-11T13:24:14.833Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 83%
+2024-09-11T13:24:14.835Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 87%
+2024-09-11T13:24:14.836Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 91%
+2024-09-11T13:24:14.837Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 95%
+2024-09-11T13:24:14.838Z [Modules] Streaming discord_zstd@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip: 100%
+2024-09-11T13:24:14.839Z [Modules] Finished module downloads. [success: 6] [failure: 0]
+2024-09-11T13:24:14.840Z [Modules] Installing updates...
+2024-09-11T13:24:14.840Z [Modules] Installing discord_desktop_core@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_desktop_core-1.zip
+2024-09-11T13:24:14.914Z [Modules] Installing discord_erlpack@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_erlpack-1.zip
+2024-09-11T13:24:14.965Z [Modules] Installing discord_spellcheck@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_spellcheck-1.zip
+2024-09-11T13:24:15.519Z [Modules] Installing discord_utils@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_utils-1.zip
+2024-09-11T13:24:15.625Z [Modules] Installing discord_voice@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_voice-1.zip
+2024-09-11T13:24:16.065Z [Modules] Installing discord_zstd@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_zstd-1.zip
+2024-09-11T13:24:16.075Z [Modules] Finished module installations. [success: 6] [failure: 0]
+2024-09-11T13:24:16.075Z [Modules] Checking for host updates.
+2024-09-11T13:24:16.234Z [Modules] Host is up to date.
+2024-09-11T13:24:16.235Z [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+2024-09-11T13:24:16.243Z [Modules] No module updates available.
+2024-09-11T13:24:17.377Z [Modules] Starting to install discord_krisp...
+2024-09-11T13:24:17.377Z [Modules] Fetching discord_krisp@1 from https://discord.com/api/modules/stable/discord_krisp/1
+2024-09-11T13:24:17.377Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip
+2024-09-11T13:24:17.384Z [Modules] Starting to install discord_game_utils...
+2024-09-11T13:24:17.576Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 1%
+2024-09-11T13:24:17.599Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 2%
+2024-09-11T13:24:17.616Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 3%
+2024-09-11T13:24:17.643Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 4%
+2024-09-11T13:24:17.662Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 5%
+2024-09-11T13:24:17.683Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 6%
+2024-09-11T13:24:17.710Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 7%
+2024-09-11T13:24:17.730Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 8%
+2024-09-11T13:24:17.773Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 9%
+2024-09-11T13:24:17.774Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 10%
+2024-09-11T13:24:17.795Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 11%
+2024-09-11T13:24:17.821Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 12%
+2024-09-11T13:24:17.848Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 13%
+2024-09-11T13:24:17.878Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 14%
+2024-09-11T13:24:17.905Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 15%
+2024-09-11T13:24:17.906Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 16%
+2024-09-11T13:24:17.954Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 17%
+2024-09-11T13:24:18.052Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 18%
+2024-09-11T13:24:18.088Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 19%
+2024-09-11T13:24:18.106Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 20%
+2024-09-11T13:24:18.120Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 21%
+2024-09-11T13:24:18.159Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 22%
+2024-09-11T13:24:18.181Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 23%
+2024-09-11T13:24:18.190Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 24%
+2024-09-11T13:24:18.238Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 25%
+2024-09-11T13:24:18.252Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 26%
+2024-09-11T13:24:18.286Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 27%
+2024-09-11T13:24:18.307Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 28%
+2024-09-11T13:24:18.319Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 29%
+2024-09-11T13:24:18.365Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 30%
+2024-09-11T13:24:18.382Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 31%
+2024-09-11T13:24:18.408Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 32%
+2024-09-11T13:24:18.439Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 33%
+2024-09-11T13:24:18.463Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 34%
+2024-09-11T13:24:18.490Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 35%
+2024-09-11T13:24:18.547Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 36%
+2024-09-11T13:24:18.550Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 37%
+2024-09-11T13:24:18.570Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 38%
+2024-09-11T13:24:18.589Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 39%
+2024-09-11T13:24:18.623Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 40%
+2024-09-11T13:24:18.654Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 41%
+2024-09-11T13:24:18.663Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 42%
+2024-09-11T13:24:18.691Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 43%
+2024-09-11T13:24:18.703Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 44%
+2024-09-11T13:24:18.739Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 45%
+2024-09-11T13:24:18.771Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 46%
+2024-09-11T13:24:18.801Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 47%
+2024-09-11T13:24:18.808Z [Modules] Checking for host updates.
+2024-09-11T13:24:18.830Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 48%
+2024-09-11T13:24:18.833Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 49%
+2024-09-11T13:24:18.871Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 50%
+2024-09-11T13:24:18.898Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 51%
+2024-09-11T13:24:18.913Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 52%
+2024-09-11T13:24:18.916Z [Modules] Starting to install discord_rpc...
+2024-09-11T13:24:18.941Z [Modules] Host is up to date.
+2024-09-11T13:24:18.941Z [Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+2024-09-11T13:24:18.942Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 53%
+2024-09-11T13:24:18.943Z [Modules] No module updates available.
+2024-09-11T13:24:18.953Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 54%
+2024-09-11T13:24:18.974Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 55%
+2024-09-11T13:24:19.000Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 56%
+2024-09-11T13:24:19.045Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 57%
+2024-09-11T13:24:19.048Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 58%
+2024-09-11T13:24:19.063Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 59%
+2024-09-11T13:24:19.097Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 60%
+2024-09-11T13:24:19.107Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 61%
+2024-09-11T13:24:19.182Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 63%
+2024-09-11T13:24:19.193Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 64%
+2024-09-11T13:24:19.201Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 65%
+2024-09-11T13:24:19.213Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 66%
+2024-09-11T13:24:19.231Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 67%
+2024-09-11T13:24:19.252Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 68%
+2024-09-11T13:24:19.278Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 69%
+2024-09-11T13:24:19.304Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 70%
+2024-09-11T13:24:19.324Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 71%
+2024-09-11T13:24:19.334Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 72%
+2024-09-11T13:24:19.368Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 73%
+2024-09-11T13:24:19.388Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 74%
+2024-09-11T13:24:19.396Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 75%
+2024-09-11T13:24:19.433Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 76%
+2024-09-11T13:24:19.448Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 77%
+2024-09-11T13:24:19.476Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 78%
+2024-09-11T13:24:19.480Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 79%
+2024-09-11T13:24:19.506Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 80%
+2024-09-11T13:24:19.536Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 81%
+2024-09-11T13:24:19.550Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 82%
+2024-09-11T13:24:19.574Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 83%
+2024-09-11T13:24:19.592Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 84%
+2024-09-11T13:24:19.604Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 85%
+2024-09-11T13:24:19.636Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 86%
+2024-09-11T13:24:19.655Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 87%
+2024-09-11T13:24:19.669Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 88%
+2024-09-11T13:24:19.692Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 89%
+2024-09-11T13:24:19.707Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 90%
+2024-09-11T13:24:19.734Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 91%
+2024-09-11T13:24:19.762Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 92%
+2024-09-11T13:24:19.970Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 93%
+2024-09-11T13:24:20.003Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 94%
+2024-09-11T13:24:20.020Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 95%
+2024-09-11T13:24:20.040Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 96%
+2024-09-11T13:24:20.062Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 97%
+2024-09-11T13:24:20.075Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 98%
+2024-09-11T13:24:20.102Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 99%
+2024-09-11T13:24:20.115Z [Modules] Streaming discord_krisp@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip: 100%
+2024-09-11T13:24:20.119Z [Modules] Fetching discord_game_utils@1 from https://discord.com/api/modules/stable/discord_game_utils/1
+2024-09-11T13:24:20.119Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip
+2024-09-11T13:24:20.119Z [Modules] Installing discord_krisp@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_krisp-1.zip
+2024-09-11T13:24:20.290Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 2%
+2024-09-11T13:24:20.291Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 3%
+2024-09-11T13:24:20.301Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 5%
+2024-09-11T13:24:20.303Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 7%
+2024-09-11T13:24:20.303Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 10%
+2024-09-11T13:24:20.304Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 11%
+2024-09-11T13:24:20.307Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 12%
+2024-09-11T13:24:20.312Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 14%
+2024-09-11T13:24:20.314Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 15%
+2024-09-11T13:24:20.317Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 16%
+2024-09-11T13:24:20.318Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 17%
+2024-09-11T13:24:20.335Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 19%
+2024-09-11T13:24:20.338Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 21%
+2024-09-11T13:24:20.338Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 22%
+2024-09-11T13:24:20.345Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 24%
+2024-09-11T13:24:20.345Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 26%
+2024-09-11T13:24:20.356Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 28%
+2024-09-11T13:24:20.357Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 30%
+2024-09-11T13:24:20.366Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 32%
+2024-09-11T13:24:20.370Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 34%
+2024-09-11T13:24:20.374Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 36%
+2024-09-11T13:24:20.378Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 37%
+2024-09-11T13:24:20.379Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 39%
+2024-09-11T13:24:20.385Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 40%
+2024-09-11T13:24:20.388Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 42%
+2024-09-11T13:24:20.393Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 44%
+2024-09-11T13:24:20.396Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 46%
+2024-09-11T13:24:20.397Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 48%
+2024-09-11T13:24:20.408Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 49%
+2024-09-11T13:24:20.410Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 51%
+2024-09-11T13:24:20.410Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 52%
+2024-09-11T13:24:20.417Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 54%
+2024-09-11T13:24:20.417Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 58%
+2024-09-11T13:24:20.419Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 59%
+2024-09-11T13:24:20.423Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 60%
+2024-09-11T13:24:20.426Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 62%
+2024-09-11T13:24:20.440Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 64%
+2024-09-11T13:24:20.440Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 65%
+2024-09-11T13:24:20.462Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 67%
+2024-09-11T13:24:20.463Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 70%
+2024-09-11T13:24:20.463Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 74%
+2024-09-11T13:24:20.471Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 75%
+2024-09-11T13:24:20.471Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 79%
+2024-09-11T13:24:20.489Z [Modules] Finished module installations. [success: 1] [failure: 0]
+2024-09-11T13:24:20.497Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 81%
+2024-09-11T13:24:20.498Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 84%
+2024-09-11T13:24:20.498Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 86%
+2024-09-11T13:24:20.498Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 91%
+2024-09-11T13:24:20.498Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 92%
+2024-09-11T13:24:20.501Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 93%
+2024-09-11T13:24:20.504Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 94%
+2024-09-11T13:24:20.516Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 96%
+2024-09-11T13:24:20.517Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 98%
+2024-09-11T13:24:20.524Z [Modules] Streaming discord_game_utils@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip: 100%
+2024-09-11T13:24:20.525Z [Modules] Fetching discord_rpc@1 from https://discord.com/api/modules/stable/discord_rpc/1
+2024-09-11T13:24:20.525Z [Modules] Streaming discord_rpc@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_rpc-1.zip
+2024-09-11T13:24:20.525Z [Modules] Installing discord_game_utils@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_game_utils-1.zip
+2024-09-11T13:24:20.583Z [Modules] Finished module installations. [success: 1] [failure: 0]
+2024-09-11T13:24:20.691Z [Modules] Streaming discord_rpc@1 to /home/awing/.config/discord/0.0.68/modules/pending/discord_rpc-1.zip: 100%
+2024-09-11T13:24:20.692Z [Modules] Finished module downloads. [success: 3] [failure: 0]
+2024-09-11T13:24:20.692Z [Modules] Installing discord_rpc@1 from /home/awing/.config/discord/0.0.68/modules/pending/discord_rpc-1.zip
+2024-09-11T13:24:20.704Z [Modules] Finished module installations. [success: 1] [failure: 0]
