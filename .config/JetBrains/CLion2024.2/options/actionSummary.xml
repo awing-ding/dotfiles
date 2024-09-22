@@ -1,7 +1,187 @@
 <application>
   <component name="ActionsLocalSummary">
+    <e n="$Cut">
+      <i c="1" l="1726755159900" />
+    </e>
+    <e n="$Paste">
+      <i c="1" l="1726755163518" />
+    </e>
+    <e n="$Undo">
+      <i c="19" l="1726753216881" />
+    </e>
+    <e n="CPP.CreateCMakeProject">
+      <i c="1" l="1726599538278" />
+    </e>
+    <e n="CPP.NewHeaderFile">
+      <i c="1" l="1726751010829" />
+    </e>
+    <e n="CidrBuildRunToolbar">
+      <i c="3" l="1726755271705" />
+    </e>
+    <e n="Debug">
+      <i c="1" l="1726752036926" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="496" l="1726755388395" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="33" l="1726753382871" />
+    </e>
+    <e n="EditorCopy">
+      <i c="5" l="1726755241260" />
+    </e>
+    <e n="EditorCut">
+      <i c="4" l="1726755387182" />
+    </e>
+    <e n="EditorDelete">
+      <i c="24" l="1726753848523" />
+    </e>
+    <e n="EditorDown">
+      <i c="49" l="1726755250486" />
+    </e>
+    <e n="EditorEnter">
+      <i c="163" l="1726755393804" />
+    </e>
+    <e n="EditorLeft">
+      <i c="151" l="1726755249890" />
+    </e>
+    <e n="EditorPageDown">
+      <i c="1" l="1726751091483" />
+    </e>
+    <e n="EditorPaste">
+      <i c="12" l="1726755391383" />
+    </e>
+    <e n="EditorPasteFromX11">
+      <i c="1" l="1726754022756" />
+    </e>
+    <e n="EditorRight">
+      <i c="179" l="1726753644592" />
+    </e>
+    <e n="EditorTab">
+      <i c="16" l="1726752600814" />
+    </e>
+    <e n="EditorUp">
+      <i c="50" l="1726753517456" />
+    </e>
+    <e n="Find">
+      <i c="2" l="1726604307184" />
+    </e>
+    <e n="Git.Commit.And.Push.Executor">
+      <i c="1" l="1726755133688" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="1" l="1726600739103" />
+    </e>
+    <e n="MoreRunToolbarActions">
+      <i c="1" l="1726750947364" />
+    </e>
+    <e n="PlatformioRefreshAction">
+      <i c="2" l="1726602057238" />
+    </e>
+    <e n="RedesignedRunConfigurationSelector">
+      <i c="2" l="1726074683209" />
+    </e>
+    <e n="Run">
+      <i c="64" l="1726753900697" />
+    </e>
+    <e n="SaveAll">
+      <i c="3" l="1726755264022" />
+    </e>
+    <e n="SearchEverywhere">
+      <i c="1" l="1726752529999" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="3" l="1726750949607" />
+    </e>
+    <e n="SpeedSearch">
+      <i c="2" l="1726599703651" />
+    </e>
+    <e n="Stop">
+      <i c="2" l="1726752041382" />
+    </e>
+    <e n="Terminal.NewTab">
+      <i c="1" l="1726601637149" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="6" l="1726756315678" />
+    </e>
+    <e n="WelcomeScreen.Plugins">
+      <i c="3" l="1726750951110" />
+    </e>
+    <e n="com.intellij.execution.actions.RunSpecifiedConfigExecutorAction">
+      <i c="1" l="1726074610663" />
+    </e>
+    <e n="com.intellij.find.SearchReplaceComponent$CloseAction">
+      <i c="1" l="1726604320230" />
+    </e>
+    <e n="com.intellij.find.SearchReplaceComponent$ModeAction">
+      <i c="2" l="1726604310886" />
+    </e>
+    <e n="com.intellij.find.editorHeaderActions.ToggleWholeWordsOnlyAction">
+      <i c="2" l="1726604312522" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="1" l="1726074346941" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$TrafficLightAction">
+      <i c="2" l="1726751040548" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="4" l="1726755173097" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="4" l="1726752530912" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$5">
+      <i c="2" l="1726599618917" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.SquareAnActionButton">
+      <i c="71" l="1726755176162" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.customFrameDecorations.header.toolbar.MainMenuButton$ShowMenuAction">
+      <i c="1" l="1726599534752" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.ActionGroupPanelWrapper$6">
+      <i c="2" l="1726074311025" />
+    </e>
     <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$4">
-      <i c="1" l="1726033436798" />
+      <i c="2" l="1726061626317" />
+    </e>
+    <e n="com.intellij.plugins.serialmonitor.ui.ConnectableList$Connectable$connectAction$1">
+      <i c="8" l="1726750887197" />
+    </e>
+    <e n="com.intellij.plugins.serialmonitor.ui.actions.EditSettingsAction">
+      <i c="1" l="1726603097040" />
+    </e>
+    <e n="com.intellij.plugins.serialmonitor.ui.console.JeditermConsoleView$scrollToTheEndToolbarAction$1">
+      <i c="3" l="1726752090317" />
+    </e>
+    <e n="com.intellij.plugins.serialmonitor.ui.console.JeditermSerialMonitorDuplexConsoleView$SwitchConsoleViewAction">
+      <i c="1" l="1726602722708" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="2" l="1726605554060" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="4" l="1726756318950" />
+    </e>
+    <e n="com.jetbrains.rdclient.daemon.highlighters.gutterMarks.FrontendGutterIconRenderer$getClickAction$1">
+      <i c="2" l="1726755102460" />
+    </e>
+    <e n="com.jetbrains.rider.actions.RiderAsyncBackendDelegatingActionPromoter$FallbackBackendAction">
+      <i c="3" l="1726603145754" />
+    </e>
+    <e n="copilot.applyInlays">
+      <i c="114" l="1726753650951" />
+    </e>
+    <e n="copilot.applyInlaysNextWord">
+      <i c="43" l="1726605386509" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="1" l="1726074684716" />
+    </e>
+    <e n="target-platformio-upload">
+      <i c="64" l="1726753900763" />
     </e>
   </component>
 </application>

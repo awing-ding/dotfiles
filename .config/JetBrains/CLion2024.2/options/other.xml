@@ -1,28 +1,55 @@
 <application>
+  <component name="CppNewDialogSettings">
+    <option name="addNewFilesToProject" value="false" />
+  </component>
+  <component name="FileEditorProviderManager">{}</component>
   <component name="LangManager">
     <option name="languageName" value="ObjectiveC" />
   </component>
   <component name="NotRoamableUiSettings">
+    <option name="fontSize" value="15.0" />
     <option name="presentationModeIdeScale" value="1.75" />
   </component>
   <component name="PropertyService"><![CDATA[{
   "keyToString": {
-    "InstalledPluginsSearchHistory": "copilot",
-    "MarketplacePluginsSearchHistory": "copilot\nplat\npla",
-    "PluginConfigurable.selectionTab": "1",
+    "InstalledPluginsSearchHistory": "Srial\nSria\nSri\nSr\nS",
+    "LAST_CALCULATED_COLOR_INDEX_KEY": "0",
+    "MarketplacePluginsSearchHistory": "serial plotter\nserial p\nSerial\nSrial\ncopilot",
+    "NextRunPlatformUpdateBuild": "CL-242.22855.75",
+    "NextRunPlatformUpdateVersion": "2024.2.2",
     "Rad.Init.Cfg.1": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.VFSInitializationConditionsToFusReporter": "true",
+    "RunOnceActivity.cidr.test.framework.showIndexingAsTask": "true",
+    "RunOnceActivity.cidr.test.roots.only": "true",
+    "RunOnceActivity.llm.installer.activate.toolwindow": "true",
+    "SerialMonitorDuplexConsoleViewState": "true",
     "ask.about.ctrl.y.shortcut.v2": "true",
+    "build.toolwindow.Build Output.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "build.toolwindow.Sync.selection.state": "com.intellij.build.BuildTreeConsoleView",
+    "clion.initialConfigPerformed": "true",
+    "enter_selection_count": "5",
     "evlsprt3.242": "7",
     "experimental.ui.on.first.startup": "true",
     "experimental.ui.used.version": "242.21829.173",
     "fileTypeChangedCounter": "1",
     "fontSizeToResetConsole": "13.0",
     "fontSizeToResetEditor": "13.0",
+    "got.it.tooltip.copilot.inlayGotIt": "1",
+    "got.it.tooltip.copilot.inlayPartialGotIt": "1",
+    "got.it.tooltip.js.debugger.terminal.start.debugger.from.url": "1",
+    "got.it.tooltip.new.terminal.promotion.242": "1",
+    "got.it.tooltip.speed.search.shown": "1",
+    "gotit.previous.run": "CL-242.21829.173",
+    "ide.memory.adjusted": "true",
     "ift.hide.welcome.screen.promo": "true",
     "input.method.disabler.muted": "true",
+    "llm.installer.last.toolwindow.state": "LLM_INSTALLER",
     "migrated.non.roamable.values.from.general.settings": "true",
     "previousColorScheme": "_@user_Dark",
-    "registry.to.advanced.settings.migration.build": "CL-242.21829.173"
+    "registry.to.advanced.settings.migration.build": "CL-242.21829.173",
+    "settings.code.style.selected.tab.C++": "Tabs and Indents",
+    "ts.lib.d.ts.version": "5.4.3"
   },
   "keyToStringList": {
     "fileTypeDetectors": [
@@ -36,5 +63,8 @@
       "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
     ]
   }
+}]]></component>
+  <component name="ShownTips"><![CDATA[{
+  "tipsOrderSeed": 1726750843910
 }]]></component>
 </application>

@@ -255,3 +255,4 @@ default_border "none"
 titlebar_padding 1
 titlebar_border_thickness 0
 include /etc/sway/config.d/*
+exec swayosd-server

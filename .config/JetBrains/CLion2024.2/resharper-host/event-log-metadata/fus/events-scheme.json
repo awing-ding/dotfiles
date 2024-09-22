@@ -1,4 +1,4 @@
-{
+﻿{
   "groups" : [ {
     "id" : "accessibility",
     "builds" : [ ],
@@ -97,6 +97,18 @@
       },
       "enums" : {
         "__group" : [ "Bundler", "rails_generators", "Gradle_tasks", "npm_scripts", "Maven_goals", "rvm_use", "rake", "rbenv_shell", "General", "Recent", "Run_configurations", "Gradle", "Maven", "npm", "Python", "Recent_projects", "ruby", "Grunt", "third.party" ]
+      }
+    }
+  }, {
+    "id" : "ai.assistant.inline.prompt",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:generation.from.inline.prompt.invoked|inline.prompt.hidden.by.user|inline.prompt.shown}" ],
+      "event_data" : {
+        "lang" : [ "{util#lang}" ]
       }
     }
   }, {
@@ -2249,6 +2261,21 @@
       }
     }
   }, {
+    "id" : "debugger.hotswap",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:hotswap.failed|hotswap.classes.reloaded|hotswap.finished|hotswap.called}" ],
+      "event_data" : {
+        "count" : [ "{regexp#integer}" ],
+        "reason" : [ "{enum:METHOD_ADDED|METHOD_REMOVED|SIGNATURE_MODIFIED|STRUCTURE_MODIFIED|CLASS_MODIFIERS_CHANGED|CLASS_ATTRIBUTES_CHANGED|METHOD_MODIFIERS_CHANGED|OTHER}" ],
+        "source" : [ "{enum:RELOAD_FILE|RELOAD_ALL|ON_REBUILD_AUTO|ON_REBUILD_ASK|RELOAD_MODIFIED_ACTION|RELOAD_MODIFIED_BUTTON}" ],
+        "status" : [ "{enum:SUCCESS|COMPILATION_FAILURE|HOT_SWAP_FAILURE|NO_CHANGES}" ]
+      }
+    }
+  }, {
     "id" : "debugger.performance",
     "builds" : [ ],
     "versions" : [ {
@@ -2380,6 +2407,18 @@
       "event_id" : [ "{enum:config.exists}" ]
     }
   }, {
+    "id" : "devcontainers.gateway.client.connection.state",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:ide.closed}" ],
+      "event_data" : {
+        "count" : [ "{regexp#integer}" ]
+      }
+    }
+  }, {
     "id" : "devcontainers.gateway.usages",
     "builds" : [ ],
     "versions" : [ {
@@ -2490,17 +2529,22 @@
     "rules" : {
       "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
+        "duration_ms" : [ "{regexp#integer}" ],
         "expand" : [ "{enum#boolean}" ],
+        "file_type" : [ "{util#file_type}" ],
         "handler" : [ "{util#class_name}" ],
+        "joint" : [ "{enum#boolean}" ],
         "lookup_active" : [ "{enum#boolean}" ],
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
         "protocol" : [ "{enum:HTTP|HTTPS|PSI_ELEMENT|FILE|OTHER}" ],
+        "refClass" : [ "{util#class_name}" ],
+        "size" : [ "{regexp#integer}" ],
         "success" : [ "{enum#boolean}" ]
       },
       "enums" : {
-        "__event_id" : [ "quick.doc.shown", "quick.doc.link.clicked", "expandable.definition.expanded", "expandable.definition.shown", "quick.doc.download.finished" ]
+        "__event_id" : [ "quick.doc.shown", "quick.doc.link.clicked", "expandable.definition.expanded", "expandable.definition.shown", "quick.doc.download.finished", "computed", "quick.doc.closed" ]
       }
     }
   }, {
@@ -2742,7 +2786,7 @@
       "from" : "1"
     } ],
     "rules" : {
-      "event_id" : [ "{enum:table.data.loaded|table.info.loaded|table.data.sorted}" ],
+      "event_id" : [ "{enum:table.data.loaded|table.info.loaded|table.data.sorted|table.data.filtered}" ],
       "event_data" : {
         "data_accessor" : [ "{util#class_name}" ],
         "loaded_rows_count" : [ "{regexp#integer}" ],
@@ -2782,7 +2826,7 @@
       "from" : "1"
     } ],
     "rules" : {
-      "event_id" : [ "{enum:functionality.blocked}" ],
+      "event_id" : [ "{enum:functionality.blocked|action.failed.due.to.dumb.mode}" ],
       "event_data" : {
         "action_id" : [ "{util#action}", "{enum#action}" ],
         "executed_when_smart" : [ "{enum#boolean}" ],
@@ -4295,19 +4339,24 @@
       "from" : "1"
     } ],
     "rules" : {
-      "event_id" : [ "{enum:finished|started|stub.index.inconsistency|index_rebuild}" ],
+      "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
         "average_content_loading_speed_bps" : [ "{regexp#integer}" ],
         "average_content_loading_speeds_by_file_type.average_content_loading_speed_for_file_type_bps" : [ "{regexp#integer}" ],
         "average_content_loading_speeds_by_file_type.file_type" : [ "{util#file_type}" ],
         "check_source" : [ "{enum:deliberate_additional_check_in_completion|deliberate_additional_check_in_intentions|wrong_type_psi_in_stub_helper|offset_outside_file_in_java|check_after_exception_in_java|no_psi_matching_ast_in_java|for_tests|other}" ],
         "content_loading_time_with_pauses" : [ "{regexp#integer}" ],
+        "cpus" : [ "{regexp#integer}" ],
         "dumb_time_with_pauses" : [ "{regexp#integer}" ],
         "dumb_time_without_pauses" : [ "{regexp#integer}" ],
         "enforced_inconsistency" : [ "{enum:psi_of_unexpected_class|other}" ],
+        "files" : [ "{regexp#integer}" ],
+        "fraction_of_time_slept" : [ "{regexp#float}" ],
         "has_pauses" : [ "{enum#boolean}" ],
         "inconsistency_type" : [ "{enum:different_number_of_psi_trees|mismatching_psi_tree}" ],
         "index_id" : [ "{util#index_id}" ],
+        "indexers" : [ "{regexp#integer}" ],
+        "indexers_slept_ms" : [ "{regexp#integer}" ],
         "indexes_writing_time_with_pauses" : [ "{regexp#integer}" ],
         "indexing_activity_type" : [ "{enum:scanning|dumb_indexing}" ],
         "indexing_session_id" : [ "{regexp#integer}" ],
@@ -4331,10 +4380,12 @@
         "scanning_time" : [ "{regexp#integer}" ],
         "total_activity_time_with_pauses" : [ "{regexp#integer}" ],
         "total_activity_time_without_pauses" : [ "{regexp#integer}" ],
+        "total_indexing_ms" : [ "{regexp#integer}" ],
         "total_time" : [ "{regexp#integer}" ],
         "type" : [ "{enum#__type}", "{enum:partial_on_project_open}", "{enum:full_on_index_restart|partial_on_index_restart}" ]
       },
       "enums" : {
+        "__event_id" : [ "finished", "started", "stub.index.inconsistency", "index_rebuild", "indexing_run_internal_statistics" ],
         "__type" : [ "full_forced", "full_on_project_open", "full", "partial_forced", "partial", "refresh" ]
       }
     }
@@ -4560,6 +4611,7 @@
       "event_id" : [ "{enum:called|shown|popup.delay}" ],
       "event_data" : {
         "distance" : [ "{regexp#integer}" ],
+        "dumb" : [ "{enum#boolean}" ],
         "dumb_mode" : [ "{enum#boolean}" ],
         "duration_ms" : [ "{regexp#integer}" ],
         "file_type" : [ "{util#file_type}" ],
@@ -4569,7 +4621,8 @@
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
-        "position" : [ "{regexp#integer}" ]
+        "position" : [ "{regexp#integer}" ],
+        "source" : [ "{enum:DAEMON_TOOLTIP|CONTEXT_ACTIONS|LIGHT_BULB|FLOATING_TOOLBAR|FILE_LEVEL_ACTIONS|PROBLEMS_VIEW|SEARCH_EVERYWHERE|CUSTOM_SHORTCUT|OTHER}" ]
       }
     }
   }, {
@@ -5804,7 +5857,7 @@
         "status" : [ "{regexp#integer}" ]
       },
       "enums" : {
-        "__event_id" : [ "activate.subscription.clicked", "start.free.trial.clicked", "error.on.log.in", "go.to.activation.clicked", "how.to.disable.ai.clicked", "log.in.to.jb.account.clicked", "manage.subscriptions.clicked", "start.ai.assistant.clicked", "unlimited.ai.clicked", "check.license.status", "log.in.manual.token", "verify.access.to.ai.license", "activate.license", "refresh.license.list", "trial.is.not.available", "show.how.to.enable.ai", "show.how.to.enable.ai.clicked", "activate.license.clicked", "license.relogin.clicked", "verify.access.to.ai.license.clicked", "log.in.manual.token.clicked", "refresh.license.list.clicked", "link.payment.method.clicked" ]
+        "__event_id" : [ "activate.subscription.clicked", "start.free.trial.clicked", "error.on.log.in", "go.to.activation.clicked", "how.to.disable.ai.clicked", "log.in.to.jb.account.clicked", "manage.subscriptions.clicked", "start.ai.assistant.clicked", "unlimited.ai.clicked", "check.license.status", "log.in.manual.token", "verify.access.to.ai.license", "activate.license", "refresh.license.list", "trial.is.not.available", "show.how.to.enable.ai", "show.how.to.enable.ai.clicked", "activate.license.clicked", "license.relogin.clicked", "verify.access.to.ai.license.clicked", "log.in.manual.token.clicked", "refresh.license.list.clicked", "link.payment.method.clicked", "tos.accepted" ]
       }
     }
   }, {
@@ -5841,6 +5894,7 @@
         "chat_kind" : [ "{util#class_name}" ],
         "chat_session_id" : [ "{regexp#date_short_hash}" ],
         "command_type" : [ "{util#llm_parameters}" ],
+        "content_source" : [ "{enum:main editor|console editor|preview editor|diff editor|tests console|chat message plaintext|chat message code snippet|chat input editor|unidentified editor|terminal|unknown}" ],
         "dialog.id" : [ "{regexp#integer}" ],
         "dialog.number_of_disliked_message" : [ "{regexp#integer}" ],
         "dialog.number_of_liked_message" : [ "{regexp#integer}" ],
@@ -5854,12 +5908,14 @@
         "function_call_trimmed" : [ "{enum#boolean}" ],
         "function_name" : [ "{util#class_name}" ],
         "is_collapsed" : [ "{enum#boolean}" ],
+        "is_copied_from_project" : [ "{enum:true|false|not applicable}" ],
         "is_exceeded_token_limit" : [ "{enum#boolean}" ],
         "labels" : [ "{util#ai_chat_labels}" ],
         "lang" : [ "{util#lang}" ],
         "level" : [ "{enum:ApplicationJvmFlag|ApplicationRegistry|ProjectFile|ProjectUserSetting|Unknown}", "{enum#__level}", "{enum:IdeLicense}", "{enum:Agreement}", "{enum:IdeLicenseNotInitialized}", "{enum:RemDev}", "{enum:CompanyLicenseInCommunity}" ],
         "message_author" : [ "{enum:Assistant|User}" ],
         "message_id" : [ "{regexp#short_hash}" ],
+        "natural_language" : [ "{enum:other|english|mandarin|mandarin chinese|chinese|yue chinese|wu chinese|hindi|spanish|french|arabic|bengali|russian|portuguese|urdu|indonesian|german|japanese|swahili|marathi|telugu|turkish|tamil|korean|vietnamese|italian|thai|gujarati|persian|iranian|polish|ukrainian|malay|javanese|punjabi|romanian|yoruba|hausa|burmese|sundanese|amharic|filipino|serbian|croatian|dutch|igbo|uzbek|maithili|odia|khmer|nepali|sinhalese|xhosa|sotho|zulu|lao|finnish|bosnian|slovak|czech|georgian|armenian|bulgarian|danish|norwegian|swedish|azerbaijani|hebrew|tigrinya|malagasy|somali|chewa|rwanda|pashto|sindhi|madurese|tajik|kazakh|kirundi|tatar|bashkir|mongolian|belarusian|latin|welsh|scots gaelic|catalan|galician|breton|occitan|basque|luxembourgish|malayalam|burushaski|komi|kyrgyz|chuvash|tuvinian|adyghe|kabardian|sakha|kalmyk|sardinian|manx|esperanto|tok pisin|navajo|greenlandic|inuktitut|twi|fijian|marshallese|palauan|maori|samoan}" ],
         "number_of_characters" : [ "{regexp#integer}" ],
         "number_of_disliked_message" : [ "{regexp#integer}" ],
         "number_of_liked_message" : [ "{regexp#integer}" ],
@@ -5873,7 +5929,7 @@
         "response_length" : [ "{regexp#integer}" ],
         "result" : [ "{enum:SUCCEED|WAIT_LIST|FAILED|EXCEPTION}" ],
         "source" : [ "{enum:CHAT_LOGIN_BUTTON|CHAT_RETRY_BUTTON|CHAT_WAIT_LIST|SETTINGS_PAGE|SETTINGS_PAGE_WAIT_LIST|NOTIFICATION|FULL_LINE}", "{enum:STATUS_BAR_LOGIN_BUTTON}" ],
-        "source_action" : [ "{enum:RIDER_GENERATE_UNIT_TESTS}", "{enum:PYTHON_EXPLAIN_DATA_FRAME}", "{enum:GENERATE_API_REQUEST_EXAMPLE}", "{enum:BUILD_ERROR_EXPLANATION}", "{enum:NEW_POPUP_CHAT}", "{enum:WRITE_DOCUMENTATION|EXPLAIN_REGEXP}", "{enum:PYTHON_GENERATE_VISUALIZATIONS}", "{enum:FIX_CODE_INTENTION}", "{enum:NEW_CHAT_FROM_EDITOR}", "{enum:EXTRACT_COMPONENT|KOTLIN_GENERATE_VISUALIZATIONS|KOTLIN_EXPLAIN_DATA_FRAME}", "{enum:GRAPH_BUILDER_GENERATE_VISUALIZATIONS}", "{enum:NAME_SUGGESTION}", "{enum:PYTHON_ADD_TYPE_ANNOTATIONS}", "{enum:GENERATE_JUPYTER_FILE_CONTENT}", "{enum:UNKNOWN|NEW_CHAT|EXPLAIN_CODE_INTENTION|FIND_PROBLEMS_INTENTION|REFACTOR_THIS|UNKNOWN_CHAT_INTENTION|LOAD_STATE|RUNTIME_ERROR_EXPLANATION|EXPLAIN_COMMIT|UNITY_CREATE_NEW_FILE|UNITY_GENERATE_CODE|GENERATE_CODE_INPLACE|GENERATE_UNIT_TESTS|CUSTOM_CHAT|PROMPT_LIBRARY|ERROR_MESSAGE|PYTHON_DJANGO_ADMIN_FOR_MODEL_INTENTION|PYTHON_DJANGO_VIEW_FOR_MODEL_INTENTION|PYTHON_DJANGO_SERIALIZER_FOR_MODEL_INTENTION|PYTHON_DJANGO_CUSTOM_INTENTION|PYTHON_DJANGO_CUSTOM_SMART_CHAT_INTENTION|PYTHON_FILE_SIGNATURES_CUSTOM_INTENTION}" ],
+        "source_action" : [ "{enum:RIDER_GENERATE_UNIT_TESTS}", "{enum:PYTHON_EXPLAIN_DATA_FRAME}", "{enum:GENERATE_API_REQUEST_EXAMPLE}", "{enum:BUILD_ERROR_EXPLANATION}", "{enum:NEW_POPUP_CHAT}", "{enum:WRITE_DOCUMENTATION|EXPLAIN_REGEXP}", "{enum:PYTHON_GENERATE_VISUALIZATIONS}", "{enum:FIX_CODE_INTENTION}", "{enum:NEW_CHAT_FROM_EDITOR}", "{enum:EXTRACT_COMPONENT|KOTLIN_GENERATE_VISUALIZATIONS|KOTLIN_EXPLAIN_DATA_FRAME}", "{enum:GRAPH_BUILDER_GENERATE_VISUALIZATIONS}", "{enum:NAME_SUGGESTION}", "{enum:PYTHON_ADD_TYPE_ANNOTATIONS}", "{enum:GENERATE_JUPYTER_FILE_CONTENT}", "{enum:PYTHON_CONVERT_LOOP_TO_COMPREHENSION}", "{enum:UNKNOWN|NEW_CHAT|EXPLAIN_CODE_INTENTION|FIND_PROBLEMS_INTENTION|REFACTOR_THIS|UNKNOWN_CHAT_INTENTION|LOAD_STATE|RUNTIME_ERROR_EXPLANATION|EXPLAIN_COMMIT|UNITY_CREATE_NEW_FILE|UNITY_GENERATE_CODE|GENERATE_CODE_INPLACE|GENERATE_UNIT_TESTS|CUSTOM_CHAT|PROMPT_LIBRARY|ERROR_MESSAGE|PYTHON_DJANGO_ADMIN_FOR_MODEL_INTENTION|PYTHON_DJANGO_VIEW_FOR_MODEL_INTENTION|PYTHON_DJANGO_SERIALIZER_FOR_MODEL_INTENTION|PYTHON_DJANGO_CUSTOM_INTENTION|PYTHON_DJANGO_CUSTOM_SMART_CHAT_INTENTION|PYTHON_FILE_SIGNATURES_CUSTOM_INTENTION}" ],
         "start_time" : [ "{regexp#integer}" ],
         "status" : [ "{regexp#integer}" ],
         "unknown_labels" : [ "{regexp#integer}" ],
@@ -5881,7 +5937,7 @@
       },
       "enums" : {
         "__error" : [ "GrazieAuthorizationException", "RequestTimeout", "AIAssistantForbiddenException", "TokenLimitExceededException", "ClassNotFoundException" ],
-        "__event_id" : [ "editUsageMessageFinished", "codeSnippetPresentationChanged", "editUserMessageStarted", "editUserMessageCancelled", "newChatCreated", "messageSent", "codeCopied", "allChatsClicked", "messageReceived", "messageReacted", "messageReceivingCancelled", "assistantChatSummarySent", "all.chats.clicked", "code.snippet.presentation.changed", "edit.usage.message.finished", "message.reacted", "assistant.chat.summary.sent", "edit.user.message.cancelled", "chat.from.history.opened", "code.copied", "edit.user.message.cancelled.with.mouse", "message.received", "edit.user.message.started", "code.inserted", "message.sent", "new.chat.created", "message.receiving.cancelled", "code.snippet.inserted.at.caret", "send.feedback.clicked", "log.in.to.jetbrains.ai", "log.out.from.jetbrains.ai", "ai.response.error", "function.called", "code.snippet.file.created", "text.copied", "alias.sent", "command.sent", "reference.attached", "chat.labels", "message.regenerate", "hashtag.clicked" ],
+        "__event_id" : [ "editUsageMessageFinished", "codeSnippetPresentationChanged", "editUserMessageStarted", "editUserMessageCancelled", "newChatCreated", "messageSent", "codeCopied", "allChatsClicked", "messageReceived", "messageReacted", "messageReceivingCancelled", "assistantChatSummarySent", "all.chats.clicked", "code.snippet.presentation.changed", "edit.usage.message.finished", "message.reacted", "assistant.chat.summary.sent", "edit.user.message.cancelled", "chat.from.history.opened", "code.copied", "edit.user.message.cancelled.with.mouse", "message.received", "edit.user.message.started", "code.inserted", "message.sent", "new.chat.created", "message.receiving.cancelled", "code.snippet.inserted.at.caret", "send.feedback.clicked", "log.in.to.jetbrains.ai", "log.out.from.jetbrains.ai", "ai.response.error", "function.called", "code.snippet.file.created", "text.copied", "alias.sent", "command.sent", "reference.attached", "chat.labels", "message.regenerate", "hashtag.clicked", "natural.language.promo.banner.shown.and.interacted", "natural.language.autodetected.banner.shown.and.interacted", "chosen.natural.language", "natural.language.setting.turned.off", "natural.language.setting.turned.on", "natural.language.setting.turned.off.after.automatic.detection", "natural.language.promo.banner.settings.clicked", "natural.language.setting.turned.on.automatically", "natural.language.autodetected.banner.settings.clicked", "text.inserted" ],
         "__level" : [ "OSRegistry", "JvmFlag", "JBA", "Allowed", "UserSetting" ]
       }
     },
@@ -5903,18 +5959,6 @@
     }, {
       "event" : "assistant.chat.summary.sent",
       "fields" : [ "chat_session_id" ]
-    }, {
-      "event" : "code.snippet.inserted.at.caret",
-      "fields" : [ "message_id", "chat_session_id" ]
-    }, {
-      "event" : "ai.response.error",
-      "fields" : [ "chat_session_id" ]
-    }, {
-      "event" : "text.copied",
-      "fields" : [ "chat_session_id", "message_id" ]
-    }, {
-      "event" : "code.snippet.presentation.changed",
-      "fields" : [ "message_id", "chat_session_id" ]
     }, {
       "event" : "function.called",
       "fields" : [ "chat_session_id" ]
@@ -5944,6 +5988,18 @@
       "fields" : [ "chat_session_id" ]
     }, {
       "event" : "code.copied",
+      "fields" : [ "message_id", "chat_session_id" ]
+    }, {
+      "event" : "code.snippet.inserted.at.caret",
+      "fields" : [ "message_id", "chat_session_id" ]
+    }, {
+      "event" : "ai.response.error",
+      "fields" : [ "chat_session_id" ]
+    }, {
+      "event" : "text.copied",
+      "fields" : [ "chat_session_id", "message_id" ]
+    }, {
+      "event" : "code.snippet.presentation.changed",
       "fields" : [ "message_id", "chat_session_id" ]
     }, {
       "event" : "message.regenerate",
@@ -6381,7 +6437,7 @@
         "plugin_version" : [ "{util#plugin_version}" ]
       },
       "enums" : {
-        "__event_id" : [ "endpoints.groups.requested", "url.path.reference.variants", "url.path.segment.navigate", "mq.reference.variants", "mq.reference.navigate", "url.path.inlay.actions", "endpoints.tab.openapi.activated", "endpoints.tab.http.client.activated", "endpoints.list.filtered", "url.path.inlay.action.triggered", "endpoints.tab.examples.activated", "endpoints.tab.documentation.activated" ]
+        "__event_id" : [ "endpoints.groups.requested", "url.path.reference.variants", "url.path.segment.navigate", "mq.reference.variants", "mq.reference.navigate", "url.path.inlay.actions", "endpoints.tab.openapi.activated", "endpoints.tab.http.client.activated", "endpoints.list.filtered", "url.path.inlay.action.triggered", "endpoints.tab.examples.activated", "endpoints.tab.documentation.activated", "endpoints.navigated" ]
       }
     }
   }, {
@@ -6483,16 +6539,19 @@
     "rules" : {
       "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
+        "add_sample_code" : [ "{enum#boolean}" ],
         "framework" : [ "{util#framework}" ],
+        "from_banner" : [ "{enum#boolean}" ],
         "generator_id" : [ "{util#class_name}" ],
         "gradle-kotlin-dsl" : [ "{enum#boolean}" ],
+        "lang" : [ "{util#lang}" ],
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
         "projectType" : [ "{util#project_type}" ]
       },
       "enums" : {
-        "__event_id" : [ "finish", "attempt", "finish.add.framework", "attempt.add.framework", "project.generated", "project.created" ]
+        "__event_id" : [ "finish", "attempt", "finish.add.framework", "attempt.add.framework", "project.generated", "project.created", "new.web.project.created" ]
       }
     }
   }, {
@@ -6696,7 +6755,7 @@
     "rules" : {
       "event_id" : [ "{enum:no.jdk.selected|jdk.registered|jdk.downloaded}" ],
       "event_data" : {
-        "vendor" : [ "{enum:AdoptOpenJDK (HotSpot)|AdoptOpenJDK (OpenJ9)|Eclipse Temurin|IBM Semeru|Amazon Corretto|GraalVM CE|GraalVM|IBM JDK|JetBrains Runtime|BellSoft Liberica|Oracle OpenJDK|SAP SapMachine|Azul Zulu|unknown}", "{enum:Homebrew OpenJDK}", "{enum:Unknown}" ],
+        "vendor" : [ "{enum:AdoptOpenJDK (HotSpot)|AdoptOpenJDK (OpenJ9)|Eclipse Temurin|IBM Semeru|Amazon Corretto|GraalVM CE|GraalVM|IBM JDK|JetBrains Runtime|BellSoft Liberica|Oracle OpenJDK|SAP SapMachine|Azul Zulu|unknown}", "{enum:Homebrew OpenJDK}", "{enum:Unknown}", "{enum:Tencent Kona|BiSheng JDK|Alibaba Dragonwell|Microsoft OpenJDK}" ],
         "version" : [ "{regexp#integer}" ]
       }
     }
@@ -7566,6 +7625,18 @@
       }
     }
   }, {
+    "id" : "python.inspection.compatibility",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:python.versions}" ],
+      "event_data" : {
+        "versions" : [ "{regexp#version}" ]
+      }
+    }
+  }, {
     "id" : "python.interpreter.remote",
     "builds" : [ ],
     "versions" : [ {
@@ -8239,7 +8310,6 @@
         "plugin_type" : [ "{util#plugin_type}" ],
         "plugin_version" : [ "{util#plugin_version}" ],
         "service_view" : [ "{enum#boolean}" ],
-        "services" : [ "{enum#boolean}" ],
         "step_id" : [ "{regexp#integer}" ],
         "target" : [ "{util#run_target}" ]
       }
@@ -8291,7 +8361,7 @@
         "hint_number" : [ "{regexp#integer}" ],
         "id" : [ "{util#run_config_id}" ],
         "input_event" : [ "{util#shortcut}" ],
-        "option_id" : [ "{enum:browser.option.with.javascript.debugger|browser.option.target.browser|browser.option.after.launch|external.system.vm.parameters.fragment}", "{enum:Runtime}", "{enum:Use_Hot_Reload}", "{enum:Roslyn_Target_Project}", "{enum:Extra_mlaunch_Parameters}", "{enum:before.launch.editSettings|before.launch.openToolWindow|beforeRunTasks|commandLineParameters|coverage|doNotBuildBeforeRun|environmentVariables|jrePath|log.monitor|mainClass|module.classpath|redirectInput|runParallel|shorten.command.line|target.project.path|vmParameters|workingDirectory|count|junit.test.kind|repeat|testScope|maven.params.workingDir|maven.params.goals|maven.params.profiles|maven.params.resolveToWorkspace|maven.general.useProjectSettings|maven.general.workOffline|maven.general.produceExceptionErrorMessages|maven.general.usePluginRegistry|maven.general.recursive|maven.general.alwaysUpdateSnapshots|maven.general.threadsEditor|maven.general.outputLevel|maven.general.checksumPolicy|maven.general.failPolicy|maven.general.showDialogWithAdvancedSettings|maven.general.mavenHome|maven.general.settingsFileOverride.checkbox|maven.general.settingsFileOverride.text|maven.general.localRepoOverride.checkbox|maven.general.localRepoOverride.text|maven.runner.useProjectSettings|maven.runner.delegateToMaven|maven.runner.runInBackground|maven.runner.vmParameters|maven.runner.envVariables|maven.runner.jdk|maven.runner.targetJdk|maven.runner.skipTests|maven.runner.properties|Dump_file_path|Exe_path|Program_arguments|Working_directory|Environment_variables|Runtime_arguments|Use_Mono_runtime|Use_external_console|Project|Target_framework|Launch_profile|Open_browser|Application_URL|Launch_URL|IIS_Express_Certificate|Hosting_model|Generate_applicationhost.config|Show_IIS_Express_output|Send_debug_request|Additional_IIS_Express_arguments|Static_method|URL|Session_name|Arguments|Solution_Configuration|Executable_file|Default_arguments|Optional_arguments}" ],
+        "option_id" : [ "{enum:browser.option.with.javascript.debugger|browser.option.target.browser|browser.option.after.launch|external.system.vm.parameters.fragment}", "{enum:Runtime}", "{enum:Use_Hot_Reload}", "{enum:Roslyn_Target_Project}", "{enum:Extra_mlaunch_Parameters}", "{enum:Project_Configuration|Launch_profile_group}", "{enum:before.launch.editSettings|before.launch.openToolWindow|beforeRunTasks|commandLineParameters|coverage|doNotBuildBeforeRun|environmentVariables|jrePath|log.monitor|mainClass|module.classpath|redirectInput|runParallel|shorten.command.line|target.project.path|vmParameters|workingDirectory|count|junit.test.kind|repeat|testScope|maven.params.workingDir|maven.params.goals|maven.params.profiles|maven.params.resolveToWorkspace|maven.general.useProjectSettings|maven.general.workOffline|maven.general.produceExceptionErrorMessages|maven.general.usePluginRegistry|maven.general.recursive|maven.general.alwaysUpdateSnapshots|maven.general.threadsEditor|maven.general.outputLevel|maven.general.checksumPolicy|maven.general.failPolicy|maven.general.showDialogWithAdvancedSettings|maven.general.mavenHome|maven.general.settingsFileOverride.checkbox|maven.general.settingsFileOverride.text|maven.general.localRepoOverride.checkbox|maven.general.localRepoOverride.text|maven.runner.useProjectSettings|maven.runner.delegateToMaven|maven.runner.runInBackground|maven.runner.vmParameters|maven.runner.envVariables|maven.runner.jdk|maven.runner.targetJdk|maven.runner.skipTests|maven.runner.properties|Dump_file_path|Exe_path|Program_arguments|Working_directory|Environment_variables|Runtime_arguments|Use_Mono_runtime|Use_external_console|Project|Target_framework|Launch_profile|Open_browser|Application_URL|Launch_URL|IIS_Express_Certificate|Hosting_model|Generate_applicationhost.config|Show_IIS_Express_output|Send_debug_request|Additional_IIS_Express_arguments|Static_method|URL|Session_name|Arguments|Solution_Configuration|Executable_file|Default_arguments|Optional_arguments}" ],
         "place" : [ "{util#place}" ],
         "plugin" : [ "{util#plugin}" ],
         "plugin_type" : [ "{util#plugin_type}" ],
@@ -8855,7 +8925,11 @@
       "event_data" : {
         "contributorID" : [ "{enum#__contributorID}", "{enum:SETextContributor}", "{enum:TextSearchContributor}", "{enum:RiderOnboardingSearchEverywhereContributor}", "{enum:DbSETablesContributor|CalculatorSEContributor}" ],
         "currentTabId" : [ "{enum#__currentTabId}", "{enum:UrlSearchEverywhereContributor|DbSETablesContributor|TextSearchContributor|CalculatorSEContributor}" ],
+        "dialogWasCancelled" : [ "{enum#boolean}" ],
+        "durationFromActionStartMs" : [ "{regexp#integer}" ],
         "durationMs" : [ "{regexp#integer}" ],
+        "durationToFirstResultFromActionStartMs" : [ "{regexp#integer}" ],
+        "durationToFirstResultLastQueryFromActionStartMs" : [ "{regexp#integer}" ],
         "firstTabId" : [ "{enum:FileSearchEverywhereContributor|SearchEverywhereContributor.All|ClassSearchEverywhereContributor|ActionSearchEverywhereContributor|SymbolSearchEverywhereContributor|third.party|Vcs.Git}", "{enum:UrlSearchEverywhereContributor|DbSETablesContributor|TextSearchContributor|CalculatorSEContributor}" ],
         "hasOnlySimilarElement" : [ "{enum#boolean}" ],
         "input_event" : [ "{util#shortcut}" ],
@@ -8897,7 +8971,8 @@
     "id" : "serial.monitor.connects",
     "builds" : [ ],
     "versions" : [ {
-      "from" : "1"
+      "from" : "1",
+      "to" : "2"
     } ],
     "rules" : {
       "event_id" : [ "{enum:serial.monitor.connected}" ],
@@ -9501,6 +9576,7 @@
       "event_id" : [ "{enum#__event_id}" ],
       "event_data" : {
         "command" : [ "{enum#__command}", "{enum:<relative path>|<absolute path>|<empty>|<whitespaces>|curl|ps|egrep|g++|gcc|systeminfo|ssh|del|echo|rmdir|type|helm|hostname|java|telnet|whatis|powershell|vim|cargo|mkdir|unalias|zip|scp|python|apt|gdb|xcopy|tracert|ip|subst|cls|taskmgr|brew|pacman|node|exit|rd|route|az|rm|tasklist|cmd|pwd|rgrep|ping|wget|unzip|zsh|pnpm|rustup|sc|eslint|top|sh|where|sudo|copy|man|free|cd|karma|set|composer|tail|more|msbuild|svn|kill|cp|cypress|prettier|gradle|rsync|help|fish|yarn|ipconfig|apt-get|ll|df|javac|dig|compact|nano|ls|mocha|screen|source|dir|chkdsk|docker-compose|netsh|bazel|mode|du|reg|playwright|webpack|find|mc|md|shred|assoc|vitest|net|export|which|valgrind|ver|nvm|tar|chown|pwsh|rvm|format|tree|mv|touch|history|less|sort|netstat|pause|expand|vi|nslookup|pathping|kubectl|ng|terraform|shutdown|systemctl|gulp|code|ifconfig|nodejs|traceroute|title|wc|docker|yum|head|grunt|git|attrib|whois|vagrant|cat|alias|chmod|htop|make|cipher|move|mvn|whence|grep|ant|start|clear|gitk|npm|tmux|jest|command|ruby|fgrep|apt-cache|service|npx|bash|ssh-keygen|taskkill|aws|prompt|hg}" ],
+        "duration_ms" : [ "{regexp#integer}" ],
         "enabled" : [ "{enum#boolean}" ],
         "event_type" : [ "{enum:NOTIFICATION_SHOWN|DIALOG_SHOWN|FEEDBACK_SENT}", "{enum:MODE_ENABLED|MODE_DISABLED|GENERATION_FINISHED|GENERATION_INTERRUPTED|GENERATION_FAILED}" ],
         "execution_time" : [ "{regexp#integer}" ],
@@ -9521,15 +9597,16 @@
         "plugin_version" : [ "{util#plugin_version}" ],
         "prompt_theme" : [ "{enum:af-magic|mikeh|michelebologna|macovsky-ruby|strug|jonathan|adben|avit|jaischeema|Soliah|geoffgarside|lambda|flazz|zhann|theunraveler|nebirhos|kardan|gianu|tjkirch_mod|ys|sonicradish|philips|kphoen|murilasso|pygmalion|maran|jnrowe|aussiegeek|duellj|refined|dieter|essembeh|juanghurtado|robbyrussell|linuxonly|oldgallois|sunrise|dpoggi|peepcode|sporty_256|suvash|sammy|agnoster|nanotech|rkj|amuse|itchy|trapd00r|jispwoso|smt|simonoff|sunaku|emotty|obraun|candy-kingdom|crcandy|gnzh|josh|jreese|mortalscumbag|wezm+|kafeitu|frontcube|dogenpunk|skaro|dallas|gentoo|kiwi|garyblessington|arrow|darkblood|simple|rixius|intheloop|norm|cloud|fino-time|xiong-chiamiov|daveverwer|nicoulaj|edvardm|bira|junkfood|bureau|mh|gozilla|takashiyoshida|lukerandall|dstufft|fletcherm|mlh|half-life|terminalparty|xiong-chiamiov-plus|evan|afowler|sorin|macovsky|kennethreitz|miloshadzic|wezm|pygmalion-virtualenv|jbergantine|crunch|eastwood|jtriley|dst|candy|blinks|muse|tjkirch|pmcgee|superjarin|fox|apple|mgutz|random|minimal|kolo|cypher|humza|rgm|risto|imajes|3den|re5et|awesomepanda|frisk|wedisagree|fwalch|fino|clean|steeef|mrtazz|rkj-repos|fishy|gallifrey|wuffers|gallois|mira|funky|tonotdo|alanpeabody|chips|rudolfs-dark|tonybaloney|huvix|probua.minimal|slim|cert|plague|slimfat|quick-term|1_shell|clean-detailed|powerline|agnosterplus|if_tea|cobalt2|night-owl|schema.json|agnoster.minimal|negligible|remk|aliens|blue-owl|catppuccin|honukai|atomic|catppuccin_macchiato|jonnychipz|glowsticks.omp.yaml|wholespace|bubbles|grandpa-style|pixelrobots|amro|froczh|cloud-context|powerlevel10k_modern|onehalf.minimal|poshmon|montys|jandedobbeleer|jtracey93|atomicBit|bubblesline|catppuccin_frappe|kali|cloud-native-azure|star|microverse-power|neko|stelbent-compact.minimal|free-ukraine|pararussel|illusi0n|spaceship|fish|unicorn|zash|devious-diamonds.omp.yaml|dracula|nu4a|catppuccin_mocha|powerlevel10k_classic|space|rudolfs-light|sonicboom_dark|emodipt-extend|lambdageneration|kushal|multiverse-neon|powerlevel10k_rainbow|tokyonight_storm|xtoys|smoothie|takuya|bubblesextra|mt|lightgreen|gruvbox|marcduiker|gmay|hul10|emodipt|larserikfinholt|stelbent.minimal|M365Princess|hunk|powerlevel10k_lean|tiwahu|easy-term|patriksvensson|cinnamon|iterm2|jblab_2021|jv_sitecorian|nordtron|catppuccin_latte|peru|pure|the-unnamed|markbull|mojada|json|paradox|thecyberden|wopian|capr4n|hotstick.minimal|di4am0nd|sonicboom_light|uew|blueish|tokyo|sim-web|material|craver|velvet|damoekri|suse|clint|elite2|skwp|adam2|giddie|adam1|pws|zefram|default|elite|fade|kylewest|bigfade|fire|smiley|powerlevel10k|restore|walters|redhat|off|bart|oliver|standard|doubletime_multiline_pyonly|minimal-gh|envy|brunton|doubletime_multiline|pete|rana|zork|cooperkid|slick|zitron|bobby-python|mairan|dulcie|tylenol|binaryanomaly|rjorgenson|pzq|garo|rainbowbrite|pro|axin|emperor|duru|powerline-multiline|mbriggs|absimple|powerline-plain|rr|luan|primer|purity|nwinkler|dos|powerline-icon|powerbash10k|powerline-naked|powerline-light|bobby|modern|modern-t|n0qorg|nwinkler_random_colors|morris|iterate|wanelo|90210|sexy|doubletime|brainy|kitsune|hawaii50|sirup|bakke|vscode|roderik|edsonarios|demula|cupcake|font|tonka|modern-time|radek|powerturk|ramses|redline|gitline|codeword|norbu|metal|easy|parrot|barbuk|oh-my-posh|elixr|liquidprompt|newin|essential|powerlevel9k}" ],
         "runAnythingProvider" : [ "{util#class_name}" ],
-        "shell" : [ "{enum:unspecified|other|activate|anaconda3|ash|bash|bbsh|cexec|cmd|cmder|cmder_shell|csh|cygwin|dash|es|eshell|fish|fsh|git|git-bash|git-cmd|hamilton|init|ion|ksh|miniconda3|mksh|msys2_shell|nushell|powershell|pwsh|rc|scsh|sh|tcsh|ubuntu|ubuntu1804|wsl|xonsh|zsh}" ],
+        "shell" : [ "{enum:unspecified|other|activate|anaconda3|ash|bash|bbsh|cexec|cmd|cmder|cmder_shell|csh|cygwin|dash|es|eshell|fish|fsh|git|git-bash|git-cmd|hamilton|init|ion|ksh|miniconda3|mksh|msys2_shell|nushell|powershell|pwsh|rc|scsh|sh|tcsh|ubuntu|ubuntu1804|wsl|xonsh|zsh}", "{enum:ZSH|BASH|FISH|POWERSHELL}" ],
         "shell_version" : [ "{regexp#version}" ],
         "subCommand" : [ "{enum:remove|doc|metadata|add|tree|version|generate-lockfile|pkgid|check|run|clean|help|fmt|new|fix|locale-project|rustdoc|update|rustc|search|build|bench|miri|fetch|vendor|report|install|uninstall|init|test|verify-project|test|install|run|suggests|help|check-platform-reqs|remove|diagnose|config|init|prohibits|require|clear-cache|show|status|outdated|reinstall|global|depends|search|run-script|bump|self-update|completion|install|validate|licenses|create-project|dump-autoload|list|audit|update|exec|update|status|checkout|commit|test|install|run|compose|mergetool|clone|revert|init|restore|push|merge|grep|cherry-pick|repack|pull|rm|mv|stash|config|bisect|fetch|log|difftool|tag|gc|switch|show|status|reset|prune|rebase|branch|apply|version|commit|diff|help|clean|submodule|add|checkout|test|install|run}" ],
         "switch_place" : [ "{enum:SETTINGS|TOOLWINDOW_OPTIONS}" ],
-        "terminalCommandHandler" : [ "{util#class_name}" ]
+        "terminalCommandHandler" : [ "{util#class_name}" ],
+        "time_span_type" : [ "{enum:FROM_STARTUP_TO_SHOWN_CURSOR|FROM_STARTUP_TO_READY_PROMPT|FROM_COMMAND_SUBMIT_TO_VISUALLY_STARTED|FROM_COMMAND_SUBMIT_TO_ACTUALLY_STARTED}" ]
       },
       "enums" : {
         "__command" : [ "unalias", "ll", "egrep", "tail", "gitk", "pacman", "wc", "zsh", "bazel", "head", "fgrep", "sh", "whatis", "fish", "shred", "terraform", "bash", "cmd", "man", "aws", "rgrep", "tsuru", "hb-service", "doctl", "rclone", "fin", "elm-json", "killall", "luz", "robot", "scc", "bat", "tee", "asdf", "railway", "swagger-typescript-api", "cicada", "pass", "ag", "pyenv", "diff", "maigret", "cdk", "elif", "xdg-open", "fold", "volta", "defaults", "base32", "envchain", "softwareupdate", "sftp", "wing", "k3d", "stow", "bc", "bcd", "xcodebuild", "hop", "br", "hardhat", "sed", "vela", "vite", "bw", "typeorm", "do-release-upgrade", "terragrunt", "lpass", "lsblk", "seq", "tailwindcss", "kdoctor", "mdfind", "pocketbase", "cf", "serverless", "j", "firebase", "m", "n", "goreleaser", "ganache-cli", "jenv", "r", "fly", "v", "rojo", "w", "create-t3-app", "z", "arch", "tmuxinator", "dd", "basenc", "hexo", "ansible-lint", "kubens", "turbo", "create-web3-frontend", "pdfunite", "sequelize", "do", "fmt", "spring", "act", "ncal", "eb", "adb", "vault", "gibo", "gpg", "swift", "rome", "chezmoi", "fnm", "elm", "youtube-dl", "adr", "pnpx", "appwrite", "quickmail", "noglob", "http", "onboardbase", "meroxa", "exec", "fd", "locust", "xcodes", "for", "mkdocs", "paste", "checkov", "multipass", "prisma", "tkn", "conda", "just", "nvim", "poetry", "gh", "mkinitcpio", "start-storybook", "go", "rich", "git-flow", "mgnl", "env", "gt", "neofetch", "flyctl", "tuist", "kubecolor", "wrk", "argo", "hub", "micro", "publish", "awsume", "visudo", "ddosify", "splash", "defaultbrowser", "copypath", "googler", "httpy", "c++", "copilot", "k9s", "atlas", "sanity", "xcrun", "truffle", "fisher", "qodana", "hx", "agrippa", "else", "dscl", "https", "id", "join", "if", "aws-vault", "ddev", "palera1n", "supabase", "nhost", "index", "csdx", "k6", "tldr", "install", "tns", "caffeinate", "clilol", "sls", "valet", "dog", "gum", "remix", "react-native", "clojure", "ibus", "cdk8s", "jq", "pip3", "oh-my-posh", "login", "amplify", "aftman", "django-admin", "goto", "file", "vale", "chsh", "rails", "bundle", "encore", "mas", "steadybit", "ncu", "vapor", "zoxide", "knex", "xxd", "mdls", "tangram", "helmfile", "fastly", "clang", "mamba", "sha1sum", "cmake", "php", "ansible-playbook", "codesign", "okta", "ln", "git-cliff", "sqlfluff", "lp", "vue", "base64", "pre-commit", "cot", "serve", "while", "unset", "fastlane", "pkill", "pgcli", "split", "dotslash", "pip", "ffmpeg", "fvm", "btop", "klist", "nginx", "airflow", "gltfjsx", "create-remix", "pulumi", "datree", "lsof", "trash", "blitz", "basename", "astro", "task", "nc", "nylas", "uniq", "zapier", "wscat", "assimp", "ni", "zellij", "glow", "nl", "np", "elixir", "nr", "sw_vers", "tsc", "ns", "coda", "nu", "tsh", "nx", "ansible-galaxy", "dprint", "zipcloak", "kitty", "tmutil", "cloudflared", "pm2", "mailsy", "od", "repeat", "heroku", "tsx", "dtm", "expo", "rushx", "broot", "magento", "direnv", "op", "src", "goctl", "ldd", "st2", "pipx", "until", "xcode-select", "degit", "osqueryi", "tfsec", "exa", "sfdx", "dcli", "whereis", "fzf", "cordova", "subl", "svokit", "asciinema", "graphcdn", "sapphire", "sta", "github", "uname", "redwood", "streamlit", "xdg-mime", "then", "deno", "mount", "esbuild", "ignite-cli", "passwd", "rg", "deployctl", "rancher", "molecule", "twilio", "cut", "pod", "yalc", "launchctl", "jmeter", "ansible", "nextflow", "jupyter", "watchman", "sidekiq", "mknod", "sl", "mix", "omz", "surreal", "stat", "su", "spotify", "black", "northflank", "meteor", "nest", "tailscale", "tb", "phpunit", "pkg-config", "kool", "charm", "ruff", "babel", "bun", "open", "swc", "tr", "deta", "asr", "rustc", "hugo", "ua", "dos2unix", "homey", "code-insiders", "stripe", "zed", "create-react-app", "mysql", "dust", "stencil", "create-video", "opa", "pro", "kubectx", "croc", "cliff-jumper", "gource", "flutter", "pathchk", "forge", "speedtest-cli", "snaplet", "vr", "next", "readlink", "newman", "remotion", "wifi-password", "ubuntu-advantage", "rbenv", "nuxi", "create-react-native-app", "wd", "fdisk", "limactl", "ionic", "wp", "authchanger", "pg_dump", "iex", "mask", "hyperfine", "vercel", "pushd", "iconv", "xc", "pipenv", "sips", "grex", "projj", "watson", "taplo", "mongoimport", "ditto", "minikube", "time", "pkgutil", "yank", "osascript", "yomo", "mob", "keytool", "dotenv-vault", "ansible-config", "okteto", "dirname", "rollup", "python3", "mackup", "truncate", "svtplay-dl", "xed", "yo", "electron", "pmset", "zig", "trap", "mikro-orm", "elm-review", "create-nx-workspace", "twiggy", "xcodeproj", "nrm", "emacs", "trunk", "clang++", "nuxt", "sysctl", "typos", "trivy", "tccutil", "ansible-doc", "dotnet", "mosh", "gcloud", "ngrok", "preset", "bosh", "kafkactl", "gem", "dart", "julia", "eas", "phpunit-watcher", "tokei", "cosign", "psql", "wrangler", "leaf", "elm-format", "capacitor", "exercism", "nocorrect", "stepzen", "quasar", "eleventy", "nativescript", "pscale", "mkfifo", "speedtest", "date", "aliases", "circleci", "trex", "firefox", "drush", "symfony", "hasura", "afplay", "space", "wezterm", "browser-sync", "autojump", "tac", "fzf-tmux", "minectl", "xargs", "hyper", "wasm-pack", "gatsby", "laravel", "kind", "crontab", "ipatool", "tfenv", "pageres", "lerna", "ts-node", "copyfile", "vimr", "ghq", "wasm-bindgen", "networkQuality", "dscacheutil", "dbt", "lsd", "who", "sqlite3", "vtex", "shortcuts", "asar", "cal", "suitecloud", "rscript", "pandoc", "ykman", "cap", "paper", "expo-cli", "doppler", "simctl", "sam", "lima", "mongocli", "pytest", "mongosh", "git-profile", "vsce", "banner", "unix2dos", "rush", "create-next-app", "netlify", "dotenv", "dateseq", "vultr-cli", "build-storybook", "rake" ],
-        "__event_id" : [ "ssh.exec", "local.exec", "terminal.command.executed", "terminal.smart.command.executed", "terminal.smart.command.not.executed", "promotion.shown", "new.terminal.switched", "promotion.got.it.clicked", "feedback.event.happened", "local.shell.started", "terminal.command.finished", "command.generation.event.happened" ]
+        "__event_id" : [ "ssh.exec", "local.exec", "terminal.command.executed", "terminal.smart.command.executed", "terminal.smart.command.not.executed", "promotion.shown", "new.terminal.switched", "promotion.got.it.clicked", "feedback.event.happened", "local.shell.started", "terminal.command.finished", "command.generation.event.happened", "terminal.timespan.finished" ]
       }
     }
   }, {
@@ -10566,6 +10643,15 @@
       }
     }
   }, {
+    "id" : "webstorm.learn",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "1"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum:new.user.opened}" ]
+    }
+  }, {
     "id" : "welcome.screen",
     "builds" : [ ],
     "versions" : [ {
@@ -10931,7 +11017,7 @@
       "look_and_feel" : [ "Acme", "Apricode_Monokai", "Arc_Dark", "Arc_Dark_(Material)", "Arc_Dark_Contrast", "Arc_Theme", "Arc_Theme_-_Orange", "Arc_Theme_Dark", "Arc_Theme_Dark_-_Orange", "Astra_Dark", "AtomOneDarkByMayke", "Atom_One_Dark", "Atom_One_Dark_(Material)", "Atom_One_Dark_Contrast", "Atom_One_Light", "Atom_One_Light_(Material)", "Atom_One_Light_Contrast", "Aura", "Ayu_Mirage", "AzurLane:_Essex", "Bas_Tools_Black", "Bas_Tools_Dark", "Bas_Tools_White", "Base16_Monokai", "Base16_Tomorrow_Dark", "BattleField", "Blackbird", "BlendS:_Maika", "Blue_Dolphin", "Blue_Whale", "Breeze_Dark", "Bright_and_Sheen_Theme", "BunnySenpai:_Mai_Dark", "BunnySenpai:_Mai_Light", "Burnt", "Calm", "Carbon", "Cell_Dark_Theme", "Chicken", "Chuunibyou:_Takanashi_Rikka", "City_Pop", "Clean_Sheet", "Cobalt", "Cobalt9", "Cobalt_2", "Codely", "Codely_Blue", "Codely_Dark", "Codely_Light", "Coderpillr_Dusk", "CoffeeBean", "Construction_Paper", "Core", "Custom_Theme_(Material)", "Cute_Pink_Light", "Cyan_light", "Cyberpunk_Theme", "DDLC:_Monika_Dark", "DDLC:_Monika_Light", "DDLC:_Natsuki_Dark", "DDLC:_Natsuki_Light", "DDLC:_Sayori_Dark", "DDLC:_Sayori_Light", "DDLC:_Yuri_Dark", "DDLC:_Yuri_Light", "DM:_Kanna", "DM:_Tohru", "DR:_Mioda_Ibuki_Dark", "DR:_Mioda_Ibuki_Light", "DTWMMN:_Hayase_Nagatoro", "Darcula", "Darcula_(blacker)", "Darcula_Darker", "Darcula_Pitch_Black", "Darcula_Solid", "Darcula_Sombre", "Darcula_Sombre_(transparent_selection)", "Darcula_Sombre_(with_bright_borders)", "Darcula_Sombre_(with_dark_borders)", "Dark", "DarkCode", "DarkCode_Contrast", "DarkDark", "DarkTheme", "Dark_Candy", "Dark_Flat", "Dark_Orange", "Dark_purple", "Dark_ubuntu", "Deep_Ocean_Theme", "Dracula", "Dracula_(Material)", "Dracula_Colorful", "Dracula_Contrast", "DxD:_Rias:_Crimson", "DxD:_Rias:_Onyx", "Dysh_Unreal_Simple", "Dysh_Unreal_Simple_Vivid", "EVA:_Katsuragi_Misato", "EVA:_Rei", "Eclipse_Plus", "El_Chalten", "Elements", "Emerald", "Ender_Theme", "EroManga:_Sagiri", "Espresso_Light", "Espresso_Lightgram", "ExperimentalDark", "ExperimentalLight", "ExperimentalLightWithLightHeader", "Field_Lights", "FlatAndMinimalistic_-_dark", "FlatAndMinimalistic_-_gray", "FlatOcean", "Forest_Night", "Foundation_Dark", "Foundation_Light", "Franxx:_Zero_Two_Dark", "Franxx:_Zero_Two_Light", "FutureDiary:_Gasai_Yuno", "Galaxy", "Galizur", "Gate:_Rory_Mercury", "Gerry_Oceanic", "Gerry_Space", "Gerry_Violet", "Giraffe", "GitHub", "GitHub_(Material)", "GitHub_Contrast", "GitHub_Dark", "GitHub_Dark_(Material)", "GitHub_Dark_Contrast", "GitHub_Dark_Dimmed", "GitHub_Light", "Gloom", "Glowing_Darcula", "Godot_Theme", "Golden_Blue", "Gradianto_Dark_Fuchsia", "Gradianto_Deep_Ocean", "Gradianto_Midnight_Blue", "Gradianto_Nature_Green", "Gray", "Green_Haze", "Green_lite", "Greenly", "Gruvbox", "Gruvbox_Dark_Hard", "Gruvbox_Dark_Medium", "Gruvbox_Dark_Soft", "Gruvbox_Github", "Gruvbox_Light_Hard", "Gruvbox_Light_Medium", "Gruvbox_Light_Soft", "Gruvbox_Material", "Hack_The_Box", "Hacker_Theme", "Haikyu:_Hinata_Shoyo", "Halcyon", "Helsing", "Hiberbee_Dark", "High-Contrast-Theme", "High_contrast", "HyperTheme", "Iceberg", "InBedBy7", "IntelliJ", "IntelliJ_Light", "Interesting", "JahySama:_Jahy", "JavierSC_dark", "JetBrainsHighContrastTheme", "KCoroutine", "Kakegurui:_Jabami_Yumeko", "KillLaKill:_Ryuko_Dark", "KillLaKill:_Ryuko_Light", "KillLaKill:_Satsuki_Dark", "KillLaKill:_Satsuki_Light", "KonoSuba:_Aqua", "KonoSuba:_Darkness_Dark", "KonoSuba:_Darkness_Light", "KonoSuba:_Megumin", "Kromatic", "Kyoto", "LS:_Konata", "Light", "Light_Custom_Theme_(Material)", "Light_Flat", "Light_Owl", "Light_Owl_(Material)", "Light_Owl_Contrast", "Light_green", "Light_with_Light_Header", "Lotus_Dark", "Lotus_Light", "LoveLive:_Sonoda_Umi", "Lumio", "MacchuPicchu", "Material_Darker", "Material_Darker_Contrast", "Material_Deep_Ocean", "Material_Deep_Ocean_Contrast", "Material_Forest", "Material_Forest_Contrast", "Material_Lighter", "Material_Lighter_Contrast", "Material_Oceanic", "Material_Oceanic_Contrast", "Material_Palenight", "Material_Palenight_Contrast", "Material_Sandy_Beach", "Material_Sandy_Beach_Contrast", "Material_Sky_Blue", "Material_Sky_Blue_Contrast", "Material_Theme:_Default", "Material_Theme:_Lighter", "Material_Theme:_Night", "Material_Theme:_Ocean", "Material_Volcano", "Material_Volcano_Contrast", "Mayukai_Alucard", "Mayukai_Mirage", "Mayukai_Mono", "Mayukai_Reversal", "Monarcula", "Monarcula_Pro", "Monarcula_Soft", "Monocai", "Monogatari:_Hanekawa_Tsubasa", "Monokai_Pro", "Monokai_Pro_(Classic)", "Monokai_Pro_(Filter_Machine)", "Monokai_Pro_(Filter_Octagon)", "Monokai_Pro_(Filter_Ristretto)", "Monokai_Pro_(Filter_Spectrum)", "Monokai_Pro_(Material)", "Monokai_Pro_Contrast", "MonsterMusume:_Miia", "Moonlight", "Moonlight_(Material)", "Moonlight_Contrast", "Moto_Ducat", "MyGruvbox", "Napalmpapalam", "NekoPara:_Azuki", "NekoPara:_Chocola", "NekoPara:_Christmas_Chocola", "NekoPara:_Cinnamon", "NekoPara:_Coconut", "NekoPara:_Maple_Dark", "NekoPara:_Maple_Light", "NekoPara:_Shigure", "NekoPara:_Vanilla", "Nier:Automata_Theme", "Night_Owl", "Night_Owl_(Material)", "Night_Owl_Contrast", "Noctis", "Noctis_Azureus", "Noctis_Bordo", "Noctis_Sereno", "Noctis_Uva", "Noctis_Voila", "Nord", "NotReallyMDTheme", "OPM:_Genos", "Obsidian", "Obsidian_Bright", "Oceanic_Dark_Theme", "Oceanic_Primal", "OneDarkMonokai", "One_Dark", "One_Dark_Italic", "One_Dark_Vivid", "One_Dark_Vivid_Italic", "OreGairu:_Yukinoshita_Yukino", "OreImo:_Kirino", "Pink_as_Heck", "Polar", "Prpl", "Purple", "QQ:_Nakano_Miku", "QQ:_Nakano_Nino", "QQ:_Nakano_Yotsuba", "Railgun:_Misaka_Mikoto", "Re:Zero:_Beatrice", "Re:Zero:_Echidna", "Re:Zero:_Emilia_Dark", "Re:Zero:_Emilia_Light", "Re:Zero:_Ram", "Re:Zero:_Rem", "ReSharperDark", "ReSharperDay", "ReSharperLight", "ReSharperNight", "ReSharper_Dark", "ReSharper_Light", "Red", "Red2", "RiderDark", "RiderDay", "RiderLight", "RiderMelonDark", "RiderMelonDay", "RiderMelonLight", "RiderMelonNight", "RiderNight", "Rider_Dark", "Rider_Day", "Rider_Light", "Rider_Melon_Dark", "Rider_Melon_Light", "Rider_Night", "Roboticket_Light", "Romeo-Theme", "Rouge", "SAO:_Asuna_Dark", "SAO:_Asuna_Light", "SG:_Makise_Kurisu", "Sage", "Salmon", "Sepia", "ShadeSmear_Dark", "ShadeSmear_Light", "Shades_Of_Purple", "Shape", "ShieldHero:_Raphtalia", "Shokugeki:_Yukihira_Soma", "Slime:_Rimiru_Tempest", "Solarized_Dark", "Solarized_Dark_(Material)", "Solarized_Dark_Contrast", "Solarized_Light", "Solarized_Light_(Material)", "Solarized_Light_Contrast", "Solo_Coding", "SpaceDay", "Spacegray", "Spacemacs", "Starlight", "StarlightDark", "Sublime", "Super_Dark", "SynthWave_'84", "SynthWave_'84_(Material)", "SynthWave_'84_Contrast", "Synthwave_Blue", "Synthwave_Refined", "System", "Tanne", "The_Above_Dark", "The_Above_Light", "Trash_Panda_Theme", "Twitch_Dark_Theme", "TypeMoon:_Astolfo", "TypeMoon:_Gray", "TypeMoon:_Ishtar_Dark", "TypeMoon:_Ishtar_Light", "TypeMoon:_Tohsaka_Rin", "Ubuntu_Theme", "Universe", "Universe_Purple", "VSCode_Dark", "VisualAssistDark", "VisualAssistDay", "VisualAssistLight", "VisualAssistNight", "VisualStudioDark", "VisualStudioDay", "VisualStudioLight", "VisualStudioNight", "Visual_Assist_Dark", "Visual_Assist_Light", "Visual_Studio_2019_Dark", "Visual_Studio_Code_Dark_Plus", "Visual_Studio_Dark", "Visual_Studio_Light", "Vocaloid:_Hatsune_Miku", "VoidTheme", "VsCode_Monokai_HC", "Windows_10_Light", "Winter_Is_Coming", "Xcode-Dark", "Xcode_Dark", "Xcode_Light", "Yaru_Dark", "YuruCamp:_Nadeshiko", "YuruCamp:_Shima_Rin", "[Doki]_AzurLane:_Essex", "[Doki]_BlendS:_Maika", "[Doki]_BunnySenpai:_Mai_Dark", "[Doki]_BunnySenpai:_Mai_Light", "[Doki]_DDLC:_Monika_Dark", "[Doki]_DDLC:_Monika_Light", "[Doki]_DDLC:_Natsuki_Dark", "[Doki]_DDLC:_Natsuki_Light", "[Doki]_DDLC:_Sayori_Dark", "[Doki]_DDLC:_Sayori_Light", "[Doki]_DDLC:_Yuri_Dark", "[Doki]_DDLC:_Yuri_Light", "[Doki]_DM:_Kanna", "[Doki]_DM:_Tohru", "[Doki]_DR:_Mioda_Ibuki_Dark", "[Doki]_DR:_Mioda_Ibuki_Light", "[Doki]_DTWMMN:_Hayase_Nagatoro", "[Doki]_DxD:_Rias:_Crimson", "[Doki]_DxD:_Rias:_Onyx", "[Doki]_EVA:_Katsuragi_Misato", "[Doki]_EVA:_Rei", "[Doki]_EroManga:_Sagiri", "[Doki]_Franxx:_Zero_Two_Dark", "[Doki]_Franxx:_Zero_Two_Light", "[Doki]_FutureDiary:_Gasai_Yuno", "[Doki]_Gate:_Rory_Mercury", "[Doki]_JahySama:_Jahy", "[Doki]_Kakegurui:_Jabami_Yumeko", "[Doki]_KillLaKill:_Ryuko_Dark", "[Doki]_KillLaKill:_Ryuko_Light", "[Doki]_KillLaKill:_Satsuki_Dark", "[Doki]_KillLaKill:_Satsuki_Light", "[Doki]_KonoSuba:_Aqua", "[Doki]_KonoSuba:_Darkness_Dark", "a.onji", "ajaaibu", "asiimov", "celestial", "color_blind_theme", "dark-jeff", "darkerla", "deep-focus-theme", "flat", "foggy-night", "hibNet_Midnight_Blue", "jDark", "jake-theme", "macOSLight", "macOS_Light", "madrid", "metalheart", "minimal", "naysayer88", "nevaTheme", "night-owl-native", "nightfall", "plaid", "qubTheme", "reykjavik", "shirotelin", "silkworm", "soft-charcoal", "spectre_theme", "subtle-hacker-theme", "theme-oldirony-dark", "theme_eclipse", "thursday", "vuesion-theme", "warm-night", "white-sand", "win10Light", "xndlnk-monokai" ],
       "os" : [ "Windows", "Mac", "Linux", "FreeBSD", "ChromeOS", "Solaris", "Other" ],
       "plugin_type" : [ "PLATFORM", "JB_BUNDLED", "JB_NOT_BUNDLED", "LISTED", "NOT_LISTED", "UNKNOWN" ],
-      "python_packages" : [ "requests", "pytz", "numpy", "six", "python-dateutil", "certifi", "urllib3", "pandas", "idna", "chardet", "Pillow", "click", "cffi", "matplotlib", "cryptography", "pyparsing", "pytest", "Jinja2", "PyYAML", "pyyaml", "Django", "redis", "scipy", "pycparser", "boto3", "attrs", "MarkupSafe", "markupsafe", "gunicorn", "djangorestframework", "lxml", "packaging", "sqlparse", "tqdm", "Werkzeug", "psycopg2-binary", "Flask", "typing-extensions", "pyasn1", "beautifulsoup4", "openpyxl", "decorator", "wcwidth", "celery", "asgiref", "psycopg2", "SQLAlchemy", "itsdangerous", "protobuf", "xlrd", "future", "botocore", "jsonschema", "PyJWT", "scikit-learn", "colorama", "zipp", "jmespath", "pyasn1-modules", "importlib-metadata", "psutil", "python-dotenv", "django-cors-headers", "toml", "rsa", "oauthlib", "requests-oauthlib", "defusedxml", "s3transfer", "django-filter", "py", "ipython", "cachetools", "wrapt", "docutils", "prompt-toolkit", "coverage", "appdirs", "tornado", "greenlet", "pluggy", "sentry-sdk", "Pygments", "pygments", "cycler", "kombu", "pymongo", "torch", "webencodings", "simplejson", "google-auth", "PyMySQL", "pymysql", "aiohttp", "opencv-python", "pillow", "flake8", "billiard", "pickleshare", "selenium", "gevent", "paramiko", "mccabe", "amqp", "kiwisolver", "grpcio", "traitlets", "mysqlclient", "django", "et-xmlfile", "xlwt", "regex", "more-itertools", "mock", "httplib2", "setuptools", "vine", "pyrsistent", "backcall", "flask", "pexpect", "joblib", "pydantic", "jedi", "soupsieve", "uritemplate", "jinja2", "google-api-python-client", "bcrypt", "ptyprocess", "sqlalchemy", "parso", "django-extensions", "iniconfig", "xmltodict", "isort", "pyOpenSSL", "pyopenssl", "seaborn", "Markdown", "markdown", "pycodestyle", "pylint", "pytest-cov", "alembic", "django-redis", "dnspython", "async-timeout", "elasticsearch", "msgpack", "django-storages", "black", "prometheus-client", "uvicorn", "filelock", "tzlocal", "Babel", "babel", "tensorflow", "bleach", "django-debug-toolbar", "html5lib", "zope.interface", "zope-interface", "torchvision", "jdcal", "pycryptodome", "text-unidecode", "yarl", "networkx", "termcolor", "multidict", "XlsxWriter", "xlsxwriter", "mypy-extensions", "marshmallow", "pyjwt", "pyzmq", "asn1crypto", "Mako", "mako", "h5py", "Flask-SQLAlchemy", "flask-sqlalchemy", "blinker", "google-auth-oauthlib", "tensorboard", "fastapi", "googleapis-common-protos", "requests-toolbelt", "reportlab", "websocket-client", "google-api-core", "tabulate", "entrypoints", "sklearn", "python-editor", "coreapi", "typed-ast", "google-auth-httplib2", "oauth2client", "mistune", "pycrypto", "pyflakes", "boto", "whitenoise", "lazy-object-proxy", "phonenumbers", "werkzeug", "virtualenv", "isodate", "pyspark", "charset-normalizer", "wheel", "jupyter", "keras", "pytorch", "scrapy", "lightgbm", "eli5", "theano", "nupic", "ramp", "pipenv", "bob", "pybrain", "caffe2", "chainer", "xgboost", "plotly", "pydot", "altair", "pycaret", "ipywidgets", "jax", "httpx", "wandb", "transformers", "diffusers", "fastai", "flair", "timm", "stable-baselines3", "speechbrain", "spacy", "huggingface-hub", "tokenizers", "tensorflow-estimator", "nvidia-cudnn-cu12", "datasets", "optax", "shap", "nvidia-cudnn-cu11", "tensorflow-text", "torchaudio", "pytorch-lightning", "sentence-transformers", "tf-keras", "ultralytics", "tfds-nightly", "bitsandbytes", "open-clip-torch", "clu", "pyglove", "azureml-contrib-services", "xformers", "tensorflow-intel", "azureml-mlflow", "mediapipe", "tritonclient", "tensorflow-cpu", "tensorflow-model-optimization", "resize-right", "mlxtend", "azureml-pipeline", "azureml-sdk", "seleniumbase", "pysbd", "jaxtyping", "imgaug", "seqio-nightly", "torchdata", "gin-config", "llama-index-legacy", "clearml", "swarms", "effdet", "rdt", "layoutparser", "tf-nightly", "tf-keras-nightly", "outlines", "torch-audiomentations", "bert-score", "vector-quantize-pytorch", "azureml-train", "spacy-alignments", "equinox", "torch-optimizer", "ema-pytorch", "handyspark", "controlnet-aux", "pytorch-warmup", "geffnet", "rerun-sdk", "ml-wrappers", "ibm-watson-machine-learning", "traceml", "sweeps", "copulas", "diffrax", "beir", "ctransformers", "lion-pytorch", "datatile", "mxnet-mkl", "tensorflow-graphics", "ale-py", "optimistix", "ctgan", "azure-ml-component", "deepecho", "jaxopt", "knockknock", "tflite-support", "voxel51-eta", "cached-path", "alphafold-colabfold", "transformers-stream-generator", "fiftyone-db", "bentoml", "pgmpy", "liac-arff", "azureml-interpret", "simsimd", "tfx", "recommenders", "syne-tune", "pyAgrum-nightly", "pyagrum-nightly", "usearch", "tensorflow-cloud", "python-tgpt", "deepctr", "peft", "bertopic", "espnet", "onnx", "gguf", "fasttext", "openvino", "fairseq", "stanza", "catboost", "caffe", "mlflow", "dvc", "prefect", "kfp", "metaflow", "kedro", "zenml", "sys", "time", "json", "re", "typing", "datetime", "argparse", "logging", "random", "collections", "math", "pathlib", "functools", "subprocess", "shutil", "copy", "itertools", "io", "warnings", "__future__", "urllib", "unittest", "glob", "tempfile", "threading", "importlib", "PIL", "pil", "enum", "pickle", "abc", "hashlib", "contextlib", "inspect", "dataclasses", "multiprocessing", "traceback", "yaml", "base64", "uuid", "string", "utils", "csv", "platform", "socket", "cv2", "asyncio", "operator", "types", "the", "zipfile", "struct", "pprint", "signal", "xml", "concurrent", "textwrap", "ast", "distutils", "queue", "configparser", "ctypes", "gzip", "codecs", "bs4", "errno", "pkg_resources", "pkg-resources", "gc", "shlex", "tests", "models", "tarfile", "http", "skimage", "numbers", "builtins", "ssl", "fnmatch", "sqlite3", "dateutil", "html", "typing_extensions", "pdb", "binascii", "getpass", "config", "decimal", "atexit", "dotenv", "einops", "openai", "google", "a", "unicodedata", "bisect", "model", "webbrowser", "stat", "email", "zlib", "difflib", "rich", "weakref", "tkinter", "pkgutil", "timeit", "imageio", "src", "optparse", "mimetypes", "locale", "nltk", "ipaddress", "calendar", "mpl_toolkits", "mpl-toolkits", "tensorboardX", "tensorboardx", "hmac", "data", "omegaconf", "secrets", "statistics", "select", "sphinx_rtd_theme", "sphinx-rtd-theme", "numba", "sphinx", "util", "pytorch_lightning", "array", "heapq", "loguru", "gradio", "PyQt5", "pyqt5", "huggingface_hub", "dataset", "shapely", "fcntl", "doctest", "StringIO", "stringio", "urllib2", "urlparse", "modules", "imp", "git", "smtplib", "getopt", "pycocotools", "streamlit", "Cython", "cython", "cProfile", "cprofile", "langchain", "importlib_metadata", "resource", "colorsys", "onnxruntime", "accelerate", "apex", "Crypto", "crypto", "lib", "starlette", "common", "librosa", "tools", "posixpath", "ConfigParser", "bz2", "fractions", "pwd", "rest_framework", "rest-framework", "Queue", "jwt", "cPickle", "cpickle", "trimesh", "open3d", "app", "test", "gym", "voluptuous", "socketserver", "attr", "hydra", "core", "winreg", "sympy", "filecmp", "soundfile", "gettext", "tiktoken", "_pytest", "mmcv", "torchmetrics", "absl", "homeassistant", "albumentations", "pygame", "readline", "mmap", "termios", "clip", "fire", "ruamel", "_thread", "prettytable", "pstats", "serial", "cgi", "easydict", "fileinput", "bpy", "typer", "pip", "ntpath", "site" ],
+      "python_packages" : [ "__future__", "_pytest", "_thread", "a", "abc", "absl", "accelerate", "aiobotocore", "aiohttp", "aiosignal", "airflow", "albumentations", "ale-py", "alembic", "alphafold-colabfold", "altair", "amqp", "annotated-types", "ansible", "apache-airflow", "apex", "app", "appdirs", "argparse", "array", "asgiref", "asn1crypto", "ast", "async-timeout", "asyncio", "atexit", "attr", "attrs", "auto-sklearn", "awscli", "azure-core", "azure-ml-component", "azureml-contrib-services", "azureml-interpret", "azureml-mlflow", "azureml-pipeline", "azureml-sdk", "azureml-train", "Babel", "babel", "backcall", "base64", "bcrypt", "beautifulsoup4", "beir", "bentoml", "bert-score", "bertopic", "billiard", "binascii", "bisect", "bitsandbytes", "black", "bleach", "blinker", "bob", "bokeh", "bonobo", "boto", "boto3", "botocore", "bpy", "bs4", "builtins", "bz2", "cached-path", "cachetools", "caffe", "caffe2", "calendar", "catboost", "celery", "certifi", "cffi", "cgi", "chainer", "chardet", "charset-normalizer", "clearml", "click", "clip", "clu", "codecs", "collections", "colorama", "colorsys", "common", "concurrent", "config", "configparser", "ConfigParser", "confluent_kafka", "confluent-kafka", "contextlib", "controlnet-aux", "copulas", "copy", "core", "coreapi", "coverage", "cPickle", "cpickle", "cProfile", "cprofile", "Crypto", "crypto", "cryptography", "csv", "ctgan", "ctransformers", "ctypes", "cudf", "cuml", "cv2", "cycler", "Cython", "cython", "dask", "data", "dataclasses", "dataset", "datasets", "datatile", "datetime", "dateutil", "dbt", "decimal", "decorator", "deepctr", "deepecho", "defusedxml", "deprecated", "difflib", "diffrax", "diffusers", "distlib", "distutils", "django-cors-headers", "django-debug-toolbar", "django-extensions", "django-filter", "django-redis", "django-storages", "Django", "django", "djangorestframework", "dnspython", "docker", "doctest", "docutils", "dotenv", "dvc", "easydict", "effdet", "einops", "elasticsearch", "eli5", "ema-pytorch", "email", "entrypoints", "enum", "equinox", "errno", "espnet", "et-xmlfile", "exceptiongroup", "fabric", "fairseq", "fastai", "fastapi", "fasttext", "fcntl", "fiftyone-db", "filecmp", "fileinput", "filelock", "fire", "flair", "flake8", "flaml", "Flask-SQLAlchemy", "flask-sqlalchemy", "Flask", "flask", "fnmatch", "fractions", "frozenlist", "fsspec", "functools", "future", "gc", "geffnet", "gensim", "getopt", "getpass", "gettext", "gevent", "gguf", "gin-config", "git", "glob", "google-api-core", "google-api-python-client", "google-auth-httplib2", "google-auth-oauthlib", "google-auth", "google-cloud-bigquery", "google-cloud-storage", "google", "googleapis-common-protos", "gradio", "great_expectations", "greenlet", "grpcio", "gunicorn", "gym", "gzip", "h2o", "h5py", "handyspark", "hashlib", "heapq", "hmac", "homeassistant", "html", "html5lib", "http", "httplib2", "httpx", "huggingface_hub", "huggingface-hub", "hydra", "ibm-watson-machine-learning", "idna", "imageio", "imgaug", "imp", "importlib_metadata", "importlib-metadata", "importlib-resources", "importlib", "iniconfig", "inspect", "io", "ipaddress", "ipython", "ipywidgets", "isodate", "isort", "itertools", "itsdangerous", "jax", "jaxopt", "jaxtyping", "jdcal", "jedi", "jenkinsapi", "Jinja2", "jinja2", "jmespath", "joblib", "json", "jsonschema", "jupyter", "jwt", "kafka-python", "kedro", "keras", "kfp", "kiwisolver", "knockknock", "kombu", "kubernetes", "langchain", "layoutparser", "lazy-object-proxy", "liac-arff", "lib", "librosa", "lightgbm", "lion-pytorch", "llama-index-legacy", "locale", "logging", "loguru", "luigi", "lxml", "Mako", "mako", "Markdown", "markdown", "MarkupSafe", "markupsafe", "marshmallow", "math", "matplotlib", "mccabe", "mediapipe", "metaflow", "mimetypes", "mistune", "ml-wrappers", "mlflow", "mlxtend", "mmap", "mmcv", "mock", "model", "models", "modules", "more-itertools", "mpl_toolkits", "mpl-toolkits", "msgpack", "multidict", "multiprocessing", "mxnet-mkl", "mypy-extensions", "mysqlclient", "networkx", "nltk", "ntpath", "numba", "numbers", "numpy", "nupic", "nvidia-cudnn-cu11", "nvidia-cudnn-cu12", "oauth2client", "oauthlib", "omegaconf", "onnx", "onnxruntime", "open-clip-torch", "open3d", "openai", "opencv-python", "openpyxl", "openvino", "operator", "optax", "optimistix", "optparse", "optuna", "outlines", "packaging", "pandas", "paramiko", "parso", "pathlib", "pdb", "peft", "petl", "pexpect", "pgmpy", "phonenumbers", "pickle", "pickleshare", "PIL", "pil", "Pillow", "pillow", "pip", "pipenv", "pkg_resources", "pkg-resources", "pkgutil", "platform", "platformdirs", "plotly", "pluggy", "polars", "posixpath", "pprint", "prefect", "prettytable", "prometheus-client", "prompt-toolkit", "proto-plus", "protobuf", "pstats", "psutil", "psycopg2-binary", "psycopg2", "ptyprocess", "pwd", "py", "pyAgrum-nightly", "pyagrum-nightly", "pyarrow", "pyasn1-modules", "pyasn1", "pybrain", "pycaret", "pycocotools", "pycodestyle", "pycparser", "pycrypto", "pycryptodome", "pydantic-core", "pydantic", "pydot", "pyflakes", "pyflinkapache_beam", "pyflinkapache-beam", "pygame", "pyglove", "Pygments", "pygments", "PyJWT", "pyjwt", "pylint", "pymongo", "PyMySQL", "pymysql", "pynacl", "pyOpenSSL", "pyopenssl", "pyparsing", "pypular", "PyQt5", "pyqt5", "pyrsistent", "pysbd", "pyspark", "pytest-cov", "pytest", "python-dateutil", "python-dotenv", "python-editor", "python-tgpt", "pytorch_lightning", "pytorch-lightning", "pytorch-warmup", "pytorch", "pytz", "PyYAML", "pyyaml", "pyzmq", "queue", "Queue", "ramp", "random", "ray", "rdt", "re", "readline", "recommenders", "redis-py", "redis", "regex", "reportlab", "requests-oauthlib", "requests-toolbelt", "requests", "rerun-sdk", "resize-right", "resource", "rest_framework", "rest-framework", "rich", "rsa", "ruamel", "s3fs", "s3transfer", "scikit-learn", "scipy", "scrapy", "seaborn", "secrets", "select", "selenium", "seleniumbase", "sentence-transformers", "sentry-sdk", "seqio-nightly", "serial", "setuptools", "shap", "shapely", "shlex", "shutil", "signal", "simplejson", "simsimd", "site", "six", "skimage", "sklearn", "smtplib", "socket", "socketserver", "soundfile", "soupsieve", "spacy-alignments", "spacy", "speechbrain", "sphinx_rtd_theme", "sphinx-rtd-theme", "sphinx", "SQLAlchemy", "sqlalchemy", "sqlite3", "sqlparse", "src", "ssl", "stable-baselines3", "stanza", "starlette", "stat", "statistics", "statsmodels", "streamlit", "string", "StringIO", "stringio", "struct", "subprocess", "supervision", "swarms", "sweeps", "sympy", "syne-tune", "sys", "tabulate", "taipy", "tarfile", "tempfile", "tensorboard", "tensorboardX", "tensorboardx", "tensorflow-cloud", "tensorflow-cpu", "tensorflow-estimator", "tensorflow-graphics", "tensorflow-intel", "tensorflow-model-optimization", "tensorflow-text", "tensorflow", "termcolor", "termios", "test", "tests", "text-unidecode", "textwrap", "tf-keras-nightly", "tf-keras", "tf-nightly", "tfds-nightly", "tflite-support", "tfx", "the", "theano", "threading", "tiktoken", "time", "timeit", "timm", "tkinter", "tokenizers", "toml", "tomli", "tomlkit", "tools", "torch-audiomentations", "torch-optimizer", "torch", "torchaudio", "torchdata", "torchmetrics", "torchvision", "tornado", "tpot", "tqdm", "traceback", "traceml", "traitlets", "transformers-stream-generator", "transformers", "trimesh", "tritonclient", "typed-ast", "typer", "types", "typing-extensions", "typing_extensions", "typing", "tzdata", "tzlocal", "ultralytics", "unicodedata", "unittest", "uritemplate", "urllib", "urllib2", "urllib3", "urlparse", "usearch", "util", "utils", "uuid", "uvicorn", "vector-quantize-pytorch", "vine", "virtualenv", "voluptuous", "voxel51-eta", "wandb", "warnings", "wcwidth", "weakref", "webbrowser", "webencodings", "websocket-client", "Werkzeug", "werkzeug", "wheel", "whitenoise", "winreg", "wrapt", "xformers", "xgboost", "xlrd", "XlsxWriter", "xlsxwriter", "xlwt", "xml", "xmltodict", "yaml", "yarl", "zenml", "zipfile", "zipp", "zlib", "zope-interface", "zope.interface" ],
       "state" : [ "enabled", "disabled" ],
       "vcs" : [ "Git", "git", "SVN", "svn", "hg4idea", "Perforce", "perforce", "TFS", "tfs", "SourceSafe", "sourcesafe", "ClearCase", "clearcase", "CVS", "cvs", "TFVS", "tfvs", "VSS", "vss", "PlasticSCM" ]
     },
@@ -10950,5 +11036,5 @@
       "version" : "Unknown|unknown.format|unknown|UNKNOWN|((\\d+\\.?)*\\d+)"
     }
   },
-  "version" : "5020"
+  "version" : "5056"
 }

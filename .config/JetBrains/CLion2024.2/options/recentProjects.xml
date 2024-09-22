@@ -1,0 +1,42 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/CLionProjects/untitled">
+          <value>
+            <RecentProjectMetaInfo frameTitle="untitled – main.cpp" projectWorkspaceId="2lvxQhv2g4bzPS5yJlBx96PBKXf">
+              <option name="activationTimestamp" value="1726599717221" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="CL-242.21829.173" />
+              <option name="buildTimestamp" value="1725038580000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="8" />
+              </option>
+              <frame x="0" y="32" width="1920" height="1048" extendedState="6" />
+              <option name="productionCode" value="CL" />
+              <option name="projectOpenTimestamp" value="1726074337569" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/CLionProjects/test_gyro">
+          <value>
+            <RecentProjectMetaInfo frameTitle="test_gyro – main.cpp" opened="true" projectWorkspaceId="2mD8JrDkpYu7xOZwCMQUnEqlCgE">
+              <option name="activationTimestamp" value="1726757140260" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="CL-242.21829.173" />
+              <option name="buildTimestamp" value="1725038580000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="960" y="32" width="960" height="1048" extendedState="6" />
+              <option name="productionCode" value="CL" />
+              <option name="projectOpenTimestamp" value="1726599717651" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="$USER_HOME$/CLionProjects/test_gyro" />
+    <option name="lastProjectLocation" value="$USER_HOME$/CLionProjects" />
+  </component>
+</application>

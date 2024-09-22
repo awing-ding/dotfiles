@@ -1,0 +1,12 @@
+<application>
+  <component name="SerialPortProfiles">
+    <default>
+      <serial-profile portName="/dev/ttyACM0" baudRate="9600" />
+    </default>
+    <serial-profiles>
+      <serial-profile name="Uno">
+        <serial-profile portName="/dev/ttyACM0" baudRate="9600" />
+      </serial-profile>
+    </serial-profiles>
+  </component>
+</application>

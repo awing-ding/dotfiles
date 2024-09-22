@@ -1,5 +1,0 @@
-2024/09/11-15:24:08.697 d5f Creating DB /home/awing/.config/discord/Local Storage/leveldb since it was missing.
-2024/09/11-15:24:08.704 d5f Reusing MANIFEST /home/awing/.config/discord/Local Storage/leveldb/MANIFEST-000001
-2024/09/11-15:28:25.573 d61 Level-0 table #5: started
-2024/09/11-15:28:25.625 d61 Level-0 table #5: 3229445 bytes OK
-2024/09/11-15:28:25.628 d61 Delete type=0 #3

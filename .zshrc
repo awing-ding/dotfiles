@@ -55,4 +55,5 @@ alias ls="ls --color"
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
-
+export PATH="$PATH:/home/awing/.cargo/bin"
+export XDG_DATA_DIRS="$XDG_DATA_DIR:/var/lib/snapd/desktop/applications"
