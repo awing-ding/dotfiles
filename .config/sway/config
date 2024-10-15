@@ -19,13 +19,13 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu tofi-drun | xargs swaymsg exec --
-
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg /home/awing/Images/bg.jpg fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec swaync
 #
 # Example configuration:
 #
@@ -61,6 +61,7 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 # Read `man 5 sway-input` for more information about this section.
 
 input 1:1:AT_Translated_Set_2_keyboard {
+    xkb_options compose:rctrl
     xkb_layout "fr"
     xkb_variant "nodeadkeys"
 }
@@ -70,6 +71,8 @@ exec swayosd-server
 #
 # Basics:
 #
+    #take screenshot
+    bindsym Print exec grimshot save area
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -95,6 +98,9 @@ exec swayosd-server
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Lock the screen
+    bindsym $mod+Escape exec swaylock -f -c 000000
 #
 # Moving around:
 #
@@ -235,10 +241,10 @@ bindsym $mod+r mode "resize"
 #
 # Status Bar:
 #
-# Read `man 5 sway-bar` for more information about this section.
+# Read `man 5 sway-bar` for more information about this section. 
 bar {
     position top
-    swaybar_command waybar
+    swaybar_command "waybar"
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     #status_command while date +'%Y-%m-%d %X'; do sleep 1; done

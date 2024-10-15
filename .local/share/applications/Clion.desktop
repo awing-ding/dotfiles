@@ -1,7 +1,7 @@
 #! /usr/bin/env xdg-open
 [Desktop Entry]
 Name=CLion
-Exec=/opt/clion/bin/clion.sh
+Exec=/opt/clion/bin/clion
 Comment=Clion
 Icon=/opt/clion/bin/clion.png
 Type=Application

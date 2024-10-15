@@ -14,7 +14,7 @@
         "format-icons": {
             "web": "",
             "2:code": "",
-            "terminator": "",
+            "alacritty": "",
             "4:work": "",
             "5:music": "",
             "6:docs": "",
@@ -77,10 +77,10 @@
         "on-click": "pavucontrol"
     },
     "custom/spotify": {
-        "format": " {}",
+        "format": " {}",
         "max-length": 40,
-        "interval": 30, // Remove this if your script is endless and write in loop
-        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+        "interval": 3, // Remove this if your script is endless and write in loop
+        "exec": "/home/awing/.config/waybar/mediaplayer.sh", // Script in resources folder
         "exec-if": "pgrep spotify"
     }
 }
