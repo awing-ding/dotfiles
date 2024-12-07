@@ -26,6 +26,10 @@ set $menu tofi-drun | xargs swaymsg exec --
 output * bg /home/awing/Images/bg.jpg fill
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec swaync
+exec swayidle -w \
+    timeout 180 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'\
+    timeout 300 'swaylock -f -c 000000'
+exec swayidle lock 'swaymsg "output * dpms on"&& swaylock' unlock 'kill -s 1 $(pgrep swaylock)'
 #
 # Example configuration:
 #
@@ -63,8 +67,14 @@ exec swaync
 input 1:1:AT_Translated_Set_2_keyboard {
     xkb_options compose:rctrl
     xkb_layout "fr"
-    xkb_variant "nodeadkeys"
+    xkb_variant "oss"
 }
+
+input type:touchpad {
+    tap enabled
+    natural_scroll disabled
+}
+
 # OSD server
 exec swayosd-server
 ### Key bindings
@@ -72,7 +82,7 @@ exec swayosd-server
 # Basics:
 #
     #take screenshot
-    bindsym Print exec grimshot save area
+    bindsym Print exec grimshot savecopy area
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -186,11 +196,11 @@ exec swayosd-server
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+Shift+m move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+m scratchpad show
 
 #
 # Fn keys

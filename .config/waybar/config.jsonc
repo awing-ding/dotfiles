@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "battery", "tray"],
+    "modules-right": ["pulseaudio", "battery", "custom/notification", "tray"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -82,5 +82,26 @@
         "interval": 3, // Remove this if your script is endless and write in loop
         "exec": "/home/awing/.config/waybar/mediaplayer.sh", // Script in resources folder
         "exec-if": "pgrep spotify"
-    }
+    },
+    
+    "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}  ",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 }
