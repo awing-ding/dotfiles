@@ -9,4 +9,8 @@ set $mod Mod4
 default_border "none"
 titlebar_padding 1
 titlebar_border_thickness 0
+blur enable
+layer_effects "waybar" {
+    blur enable
+}
 include $HOME/.config/sway/config.d/*
