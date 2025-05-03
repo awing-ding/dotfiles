@@ -11,7 +11,8 @@ set $right l
 set $term alacritty
 
 # Application launcher
-set $launcher fuzzel
+#set $launcher XDG_DATA_DIRS=/var/lib/snapd/desktop/applications:/usr/share:/home/awing/.nix-profile/share:/nix/var/nix/profiles/default/share fuzzel
+set $launcher /home/awing/launchfuzzel.sh
 
 # Application menu
 set $menu nwg-drawer
@@ -90,6 +91,8 @@ set $lock swaylock -C ~/.config/swaylock/config
     # Workspace bindings are using bindcode instead of bindsym for better Azerty compatibility.
     # https://github.com/EndeavourOS-Community-Editions/sway/pull/81
     # Use wev to find keycodes for setting up other bindings this way.
+	
+	bindsym $mod+g exec sway-new-workspace open
 
     bindcode {
         # Switch to workspace

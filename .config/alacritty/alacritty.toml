@@ -1,3 +1,8 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/campbell.toml"
+]
+
 [font]
     normal = { family = "JetBrains Mono Nerd Font", style = "Medium" }
     bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }

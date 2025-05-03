@@ -4,8 +4,10 @@
 
 # user config directory
 set $mod Mod4
-    bindsym $mod+Tab workspace prev
-    bindsym Alt+Tab workspace next
+bindsym $mod+Tab workspace prev
+bindsym Alt+Tab workspace next
+bindgesture swipe:right workspace next
+bindgesture swipe:left workspace prev
 default_border "none"
 titlebar_padding 1
 titlebar_border_thickness 0
