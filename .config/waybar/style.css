@@ -1,3 +1,4 @@
+@import "colors.css" ;
 /* =============================================================================
  *
  * Waybar configuration
@@ -58,15 +59,16 @@
     padding: 0;
 }
 
-.modules-right, .modules-center, .modules-left {
+.modules-right, /*.modules-center,*/ .modules-left {
 	background-color: @base1;
 	margin: 0;
 }
 
-.modules-center {
+/*.modules-center {
     padding: 0 15px;
     border-radius: 10px; 
-}
+}*/
+
 .modules-left {
     padding-right: 15px;
     border-radius: 0 10px 10px 0;
@@ -96,6 +98,7 @@
  * -------------------------------------------------------------------------- */
 
 #custom-launcher {
+	color: @blue;
     margin-left:15px;
     margin-right:10px;
 }
@@ -133,6 +136,9 @@
     font-weight: bold;
 }
 
+#network {
+	color: @blue;
+}
 #network.disconnected {
     color: orange;
 }
@@ -163,10 +169,12 @@
     padding-right:5px;
 }
 
-#backlight.icon {
+#backlight {
+	color: @pink;
 }
 
 #pulseaudio {
+	color: @mauve;
 }
 
 #pulseaudio.muted {
@@ -177,6 +185,10 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#battery.charging {
+	color: @green;
 }
 
 #battery.warning {
@@ -198,7 +210,11 @@
 }
 
 #custom-power {
-    margin-left:15px;
+    margin-left:5px;
     margin-right:15px;
     font-size:15px;
+}
+
+#idle_inhibitor {
+	color: @lavender;
 }

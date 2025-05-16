@@ -7,7 +7,7 @@
         {
           "foreground": "cyan",
           "style": "powerline",
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+          "template": "󰣇",
           "type": "os"
         },
         {
