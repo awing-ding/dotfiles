@@ -1,0 +1,51 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[transient_prompt]
+  template = '> '
+  foreground = 'yellow'
+  background = 'transparent'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    template = ' {{ .Path}} '
+    foreground = 'blue'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
+
+	[blocks.segments.properties]
+	  style = 'letter'
+
+  [[blocks.segments]]
+    type = 'python'
+	style = 'plain'
+	template = " {{ if (.Venv) }}.Venv{{ end }}"
+
+  [[blocks.segments]]
+    template = '  {{ .HEAD}}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    foreground = '#c6c6c6'
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '>'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
