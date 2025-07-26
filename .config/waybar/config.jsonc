@@ -82,7 +82,7 @@
 		"idle_inhibitor",
 		//"cpu",
 		//"memory",
-		"network",
+		//"network",
 		"backlight",
 		"pulseaudio",
 		"battery",

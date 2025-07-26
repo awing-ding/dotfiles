@@ -7,16 +7,21 @@
         {
           "foreground": "cyan",
           "style": "powerline",
-          "template": "󰣇",
+          "template": "{{ .Icon}}",
           "type": "os"
         },
+		{
+		  "foreground": "cyan",
+		  "template": " {{.UserName}}@{{.HostName}}:",
+		  "type": "session"
+		},
         {
           "foreground": "cyan",
           "properties": {
             "style": "full"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
+          "template": "{{ .Path }} ",
           "type": "path"
         },
         {
