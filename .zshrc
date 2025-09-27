@@ -68,3 +68,6 @@ if [ -e /home/awing/.nix-profile/etc/profile.d/nix.sh ]; then . /home/awing/.nix
 [[ -f /home/awing/.dart-cli-completion/zsh-config.zsh ]] && . /home/awing/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
