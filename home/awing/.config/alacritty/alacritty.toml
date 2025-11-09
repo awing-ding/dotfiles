@@ -16,4 +16,5 @@ import = [
 shell = "/usr/bin/zsh"
 
 [window]
+dynamic_title = true
 opacity = 0.6

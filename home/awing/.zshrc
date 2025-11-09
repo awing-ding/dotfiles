@@ -24,6 +24,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light Aloxaf/fzf-tab
+zinit light amyreese/zsh-titles
 zinit snippet https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/refs/heads/master/plugins/git/git.plugin.zsh
 
 # zsh-completions
@@ -61,12 +62,15 @@ source /home/awing/.zprofile
 #eval "$(oh-my-posh init zsh --config /home/awing/.config/ohmyposh/config.toml)"
 eval "$(oh-my-posh init zsh --config /home/awing/.config/ohmyposh/negligible.json)"
 
-if [ -e /home/awing/.nix-profile/etc/profile.d/nix.sh ]; then . /home/awing/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/awing/.dart-cli-completion/zsh-config.zsh ]] && . /home/awing/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+
+
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"

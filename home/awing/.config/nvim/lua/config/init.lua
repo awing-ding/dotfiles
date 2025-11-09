@@ -25,8 +25,6 @@ vim.g.maplocalleader = "\\"
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = 'yes'
 
-require("lazy").setup({
-	spec = {
-		{ import = "plugins" },
-	}
-})
+require("lazy").setup("plugins")
+
+vim.lsp.enable('tinymist')

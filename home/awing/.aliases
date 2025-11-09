@@ -1,4 +1,6 @@
 alias vps-ssh="TERM=xterm-256color ssh"
+alias sshm="TERM=xterm-256color sshm"
 alias sudo=sudo-rs
 alias ls=eza
 alias :q=exit
+alias cat=bat
