@@ -4,6 +4,8 @@
 	// "height": 30, // Auto-height is used when commented
 	// "width": 1280, // Full screen width when commented
 	"spacing": 16, // Gaps between modules (in px)
+  "on-sigusr1": "hide",
+  "on-sigusr2": "show",
 	// See `man waybar` for more configuration options
 
 // Configuration - modules-left
@@ -125,7 +127,7 @@
 	"player-icons": {
 		"default": "▶",
 		"mpv": "🎵",
-		"ncspot": " ",
+		"ncspot": " "
 	},
 	"status-icons": {
 		"paused": "⏸"
@@ -215,7 +217,7 @@
 		"format": "{usage:>3}%",
 		"states": {
 			"warning": 70,
-			"critical": 90,
+			"critical": 90
 		},
 		"on-click": "alacritty -e btop"
 	},
@@ -266,6 +268,7 @@
 	},
 
 	"battery": {
+		"interval": 60,
 		"states": {
 			"warning": 30,
 			"critical": 15

@@ -4,3 +4,4 @@ alias sudo=sudo-rs
 alias ls=eza
 alias :q=exit
 alias cat=bat
+alias nft='sudo nft'
