@@ -1,0 +1,10 @@
+[Unit]
+Description=Hide Waybar after inactivity
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=3min
+Unit=hide-waybar.service
+
+[Install]
+WantedBy=timers.target

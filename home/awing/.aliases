@@ -5,3 +5,6 @@ alias ls=eza
 alias :q=exit
 alias cat=bat
 alias nft='sudo nft'
+alias poweroff='hyprshutdown --post-cmd "systemctl poweroff"'
+alias reboot='hyprshutdown --post-cmd "systemctl reboot"'
+alias soft-reboot='hyprshutdown --post-cmd "systemctl soft-reboot"'

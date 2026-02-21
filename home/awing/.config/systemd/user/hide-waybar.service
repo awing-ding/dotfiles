@@ -1,0 +1,8 @@
+[Service]
+Type=oneshot
+ExecStart=bash -c "/usr/bin/kill -SIGUSR1 $(/usr/bin/pgrep waybar)"
+
+[Unit]
+Description=Hide Waybar
+Requires=waybar.service
+After=waybar.service

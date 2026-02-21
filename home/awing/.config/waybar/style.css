@@ -116,10 +116,9 @@
     margin-left: 2px;
 }
 
-#workspaces button.focused {
-    border: 1px solid #d8dee9;
+#workspaces button.focused, #workspaces button.visible {
+    border: 1px solid #62629d;
 }
-
 #workspaces button.urgent {
     border-color: #c9545d;
     color: #c9545d;
